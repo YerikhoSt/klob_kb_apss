@@ -9,6 +9,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: HomeRoute.page,
           path: '/',
+          initial: true,
         ),
       ];
 }
