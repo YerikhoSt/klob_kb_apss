@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 /// Constant sizes to be used in the app (paddings, gaps, rounded corners etc.)
 class Sizes {
@@ -52,122 +53,61 @@ class Sizes {
       mediaQueryData(context).padding.bottom;
 }
 
-class Gap {
+class GapSizes {
   /// Constant gap widths
-  static const SizedBox w2 = SizedBox(width: Sizes.p2);
-  static const SizedBox w4 = SizedBox(width: Sizes.p4);
-  static const SizedBox w8 = SizedBox(width: Sizes.p8);
-  static const SizedBox w12 = SizedBox(width: Sizes.p12);
-  static const SizedBox w16 = SizedBox(width: Sizes.p16);
-  static const SizedBox w20 = SizedBox(width: Sizes.p20);
-  static const SizedBox w24 = SizedBox(width: Sizes.p24);
-  static const SizedBox w28 = SizedBox(width: Sizes.p28);
-  static const SizedBox w32 = SizedBox(width: Sizes.p32);
-  static const SizedBox w36 = SizedBox(width: Sizes.p36);
-  static const SizedBox w40 = SizedBox(width: Sizes.p40);
-  static const SizedBox w48 = SizedBox(width: Sizes.p48);
-  static const SizedBox w56 = SizedBox(width: Sizes.p56);
-  static const SizedBox w64 = SizedBox(width: Sizes.p64);
-  static const SizedBox w72 = SizedBox(width: Sizes.p72);
-  static const SizedBox w80 = SizedBox(width: Sizes.p80);
+  static const Gap w2 = Gap(Sizes.p2);
+  static const Gap w4 = Gap(Sizes.p4);
+  static const Gap w8 = Gap(Sizes.p8);
+  static const Gap w12 = Gap(Sizes.p12);
+  static const Gap w16 = Gap(Sizes.p16);
+  static const Gap w20 = Gap(Sizes.p20);
+  static const Gap w24 = Gap(Sizes.p24);
+  static const Gap w28 = Gap(Sizes.p28);
+  static const Gap w32 = Gap(Sizes.p32);
+  static const Gap w36 = Gap(Sizes.p36);
+  static const Gap w40 = Gap(Sizes.p40);
+  static const Gap w48 = Gap(Sizes.p48);
+  static const Gap w56 = Gap(Sizes.p56);
+  static const Gap w64 = Gap(Sizes.p64);
+  static const Gap w72 = Gap(Sizes.p72);
+  static const Gap w80 = Gap(Sizes.p80);
 
-  /// Constant gap heights
-  static const SizedBox h2 = SizedBox(height: Sizes.p2);
-  static const SizedBox h4 = SizedBox(height: Sizes.p4);
-  static const SizedBox h8 = SizedBox(height: Sizes.p8);
-  static const SizedBox h12 = SizedBox(height: Sizes.p12);
-  static const SizedBox h16 = SizedBox(height: Sizes.p16);
-  static const SizedBox h20 = SizedBox(height: Sizes.p20);
-  static const SizedBox h24 = SizedBox(height: Sizes.p24);
-  static const SizedBox h28 = SizedBox(height: Sizes.p28);
-  static const SizedBox h32 = SizedBox(height: Sizes.p32);
-  static const SizedBox h36 = SizedBox(height: Sizes.p36);
-  static const SizedBox h40 = SizedBox(height: Sizes.p40);
-  static const SizedBox h48 = SizedBox(height: Sizes.p48);
-  static const SizedBox h56 = SizedBox(height: Sizes.p56);
-  static const SizedBox h64 = SizedBox(height: Sizes.p64);
-  static const SizedBox h72 = SizedBox(height: Sizes.p72);
-  static const SizedBox h80 = SizedBox(height: Sizes.p80);
-
-  static SizedBox size({double? h, double? w}) => SizedBox(
-        height: h,
-        width: w,
-      );
+  static Gap size({double? size}) => Gap(size ?? 0);
 }
 
 class GapSliver {
-  /// Constant gap widths
-  static const SliverToBoxAdapter w2 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p2));
-  static const SliverToBoxAdapter w4 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p4));
-  static const SliverToBoxAdapter w8 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p8));
+  static const SliverToBoxAdapter w2 = SliverToBoxAdapter(child: Gap(Sizes.p2));
+  static const SliverToBoxAdapter w4 = SliverToBoxAdapter(child: Gap(Sizes.p4));
+  static const SliverToBoxAdapter w8 = SliverToBoxAdapter(child: Gap(Sizes.p8));
   static const SliverToBoxAdapter w12 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p12));
+      SliverToBoxAdapter(child: Gap(Sizes.p12));
   static const SliverToBoxAdapter w16 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p16));
+      SliverToBoxAdapter(child: Gap(Sizes.p16));
   static const SliverToBoxAdapter w20 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p20));
+      SliverToBoxAdapter(child: Gap(Sizes.p20));
   static const SliverToBoxAdapter w24 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p24));
+      SliverToBoxAdapter(child: Gap(Sizes.p24));
   static const SliverToBoxAdapter w28 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p28));
+      SliverToBoxAdapter(child: Gap(Sizes.p28));
   static const SliverToBoxAdapter w32 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p32));
+      SliverToBoxAdapter(child: Gap(Sizes.p32));
   static const SliverToBoxAdapter w36 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p36));
+      SliverToBoxAdapter(child: Gap(Sizes.p36));
   static const SliverToBoxAdapter w40 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p40));
+      SliverToBoxAdapter(child: Gap(Sizes.p40));
   static const SliverToBoxAdapter w48 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p48));
+      SliverToBoxAdapter(child: Gap(Sizes.p48));
   static const SliverToBoxAdapter w56 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p56));
+      SliverToBoxAdapter(child: Gap(Sizes.p56));
   static const SliverToBoxAdapter w64 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p64));
+      SliverToBoxAdapter(child: Gap(Sizes.p64));
   static const SliverToBoxAdapter w72 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p72));
+      SliverToBoxAdapter(child: Gap(Sizes.p72));
   static const SliverToBoxAdapter w80 =
-      SliverToBoxAdapter(child: SizedBox(width: Sizes.p80));
+      SliverToBoxAdapter(child: Gap(Sizes.p80));
 
-  /// Constant gap heights
-  static const SliverToBoxAdapter h2 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p2));
-  static const SliverToBoxAdapter h4 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p4));
-  static const SliverToBoxAdapter h8 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p8));
-  static const SliverToBoxAdapter h12 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p12));
-  static const SliverToBoxAdapter h16 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p16));
-  static const SliverToBoxAdapter h20 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p20));
-  static const SliverToBoxAdapter h24 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p24));
-  static const SliverToBoxAdapter h28 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p28));
-  static const SliverToBoxAdapter h32 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p32));
-  static const SliverToBoxAdapter h36 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p36));
-  static const SliverToBoxAdapter h40 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p40));
-  static const SliverToBoxAdapter h48 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p48));
-  static const SliverToBoxAdapter h56 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p56));
-  static const SliverToBoxAdapter h64 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p64));
-  static const SliverToBoxAdapter h72 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p72));
-  static const SliverToBoxAdapter h80 =
-      SliverToBoxAdapter(child: SizedBox(height: Sizes.p80));
-
-  static SliverToBoxAdapter size({double? h, double? w}) => SliverToBoxAdapter(
-        child: SizedBox(
-          height: h,
-          width: w,
-        ),
+  static SliverToBoxAdapter size({double? size, double? w}) =>
+      SliverToBoxAdapter(
+        child: Gap(size ?? 0),
       );
 }
