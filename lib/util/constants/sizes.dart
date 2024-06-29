@@ -106,7 +106,7 @@ class GapSliver {
   static const SliverToBoxAdapter w80 =
       SliverToBoxAdapter(child: Gap(Sizes.p80));
 
-  static SliverToBoxAdapter size({double? size, double? w}) =>
+  static SliverToBoxAdapter size({double? size}) =>
       SliverToBoxAdapter(
         child: Gap(size ?? 0),
       );
