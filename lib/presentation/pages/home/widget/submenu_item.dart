@@ -28,6 +28,8 @@ class SubmenuItem extends StatelessWidget {
       splashColor: AppColors.primaryMain,
       borderRadius: BorderRadius.circular(8),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             height: 50,
@@ -47,6 +49,7 @@ class SubmenuItem extends StatelessWidget {
           Text(
             title,
             style: context.bodySmall?.bold,
+            textAlign: TextAlign.center,
           ),
         ],
       ),

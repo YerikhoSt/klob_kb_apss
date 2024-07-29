@@ -62,43 +62,43 @@ class MenuSection extends StatelessWidget {
       color: AppColors.neutral10,
       child: Padding(
         padding: const EdgeInsets.symmetric(
-              vertical: Sizes.p12,
-              horizontal: Sizes.p8,
-            ),
-            child: Column(
-              children: List.generate(
-                (listSubMenu.length / 4).ceil(),
-                (index) {
-                  int start = index * 4;
-                  int end = start + 4;
-                  return Padding(
-                    padding: index == 0
-                        ? EdgeInsets.zero
-                        : const EdgeInsets.only(top: Sizes.p12),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: listSubMenu
-                          .sublist(
-                            start,
-                            end > listSubMenu.length ? listSubMenu.length : end,
-                          )
-                          .map(
-                            (element) => Container(
-                              alignment: Alignment.center,
-                              width: Sizes.screenWidth(context) / 4 - 4,
-                              child: SubmenuItem(
-                                title: element['title'] as String,
-                                iconPath: element['icon'] as String,
-                                onTap: element['onTap']! as VoidCallback,                                
-                              ),
-                            ),
-                          )
-                          .toList(),
-                    ),
-                  );
-                },
-              ),
-            ),
+          vertical: Sizes.p12,
+          horizontal: Sizes.p8,
+        ),
+        child: Column(
+          children: List.generate(
+            (listSubMenu.length / 4).ceil(),
+            (index) {
+              int start = index * 4;
+              int end = start + 4;
+              return Padding(
+                padding: index == 0
+                    ? EdgeInsets.zero
+                    : const EdgeInsets.only(top: Sizes.p12),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: listSubMenu
+                      .sublist(
+                        start,
+                        end > listSubMenu.length ? listSubMenu.length : end,
+                      )
+                      .map(
+                        (element) => Container(
+                          alignment: Alignment.center,
+                          width: Sizes.screenWidth(context) / 4 - 20,
+                          child: SubmenuItem(
+                            title: element['title'] as String,
+                            iconPath: element['icon'] as String,
+                            onTap: element['onTap']! as VoidCallback,
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }

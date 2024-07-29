@@ -12,8 +12,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Expanded(child: Stack(
+    return Scaffold(
+      body: Expanded(
+          child: Stack(
         children: [
           _mainSection(),
         ],
@@ -23,6 +24,8 @@ class HomePage extends StatelessWidget {
 
   Widget _mainSection() {
     List<String> carouselData = [
+      "assets/images/carousel_1.png",
+      "assets/images/carousel_1.png",
       "assets/images/carousel_1.png",
     ];
     return SafeArea(
