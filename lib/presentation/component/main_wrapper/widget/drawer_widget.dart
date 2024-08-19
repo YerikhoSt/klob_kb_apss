@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
-import 'package:klob_kb_apps/presentation/main_wrapper/bloc/drawer_bloc.dart';
+import 'package:klob_kb_apps/presentation/component/main_wrapper/bloc/drawer_bloc.dart';
 
 class _NavigationItem {
   final NavItem item;
@@ -17,7 +17,8 @@ class NavDrawerWidget extends StatelessWidget {
 
   final List<_NavigationItem> _drawerItems = [
     _NavigationItem(NavItem.homeItem, "Home", Iconsax.home),
-    _NavigationItem(NavItem.mitraBestariItem, "Mitra Bestari", Iconsax.user),
+    _NavigationItem(
+        NavItem.mitraBestariItem, "Kondisi Medis Penyerta", Iconsax.user),
   ];
 
   @override

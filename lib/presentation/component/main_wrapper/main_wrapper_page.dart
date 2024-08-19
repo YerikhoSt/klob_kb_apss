@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:klob_kb_apps/presentation/main_wrapper/bloc/drawer_bloc.dart';
-import 'package:klob_kb_apps/presentation/main_wrapper/widget/drawer_widget.dart';
+import 'package:klob_kb_apps/presentation/component/main_wrapper/bloc/drawer_bloc.dart';
+import 'package:klob_kb_apps/presentation/component/main_wrapper/widget/drawer_widget.dart';
 import 'package:klob_kb_apps/presentation/pages/home/home_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
 import 'package:klob_kb_apps/presentation/pages/mitra_bestari/mitra_bestari_page.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
@@ -78,7 +79,7 @@ class _MainWrapperPageState extends State<MainWrapperPage> {
       case NavItem.homeItem:
         return "Home";
       case NavItem.mitraBestariItem:
-        return "Mitra Bestari";
+        return "Kondisi Medis Peneyerta";
     }
   }
 
@@ -87,7 +88,7 @@ class _MainWrapperPageState extends State<MainWrapperPage> {
       case NavItem.homeItem:
         return const HomePage();
       case NavItem.mitraBestariItem:
-        return const MitraBestariPage();
+        return const KondisiMedisPenyertaPage();
     }
   }
 }
