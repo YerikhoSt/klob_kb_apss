@@ -46,88 +46,130 @@ class Question {
       ),
       Question(
         type: 'Hipertensi',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita hipertensi ?',
+        options: [
+          '140-150/99-99 atau terkontrol adekuat',
+          'Lebih dari atau sama dengan 160 / 100',
+          'Tidak'
+        ],
       ),
       Question(
         type: 'Obesitas',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita obesitas dengan BMI ≥ 30kg/m2 ?',
+        options: [
+          'Ya',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Diabetes',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita diabetes ?',
+        options: [
+          'Ya',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Merokok',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien merokok ?',
+        options: [
+          'Usia lebih dari 35 thn',
+          'Usia kurang dari 35 thn',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Sakit Kepala',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita sakit kepala ?',
+        options: [
+          'Migren disertai aura',
+          'Bukan migren',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Interaksi Obat-obatan lain',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien melakukan interaksi obat-obatan lain ?',
+        options: [
+          'Beberapa antikonvulsan',
+          'Rifampicin/Rifabutin',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'HIV',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita HIV ?',
+        options: [
+          'Terapi antiretro virus',
+          'WHO stadium 3 atau 4',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Inveksi Menular Seksual (IMS)',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita penyakit menular seksual (IMS) ?',
+        options: [
+          'Gonore Klamidia',
+          'Resiko meningkat untuk IMS',
+          'IMS lain dan vaginitis',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Penyakit radang panggul',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita penyakit radang panggul ?',
+        options: [
+          'Ya',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Sepsis',
-        question: '',
-        options: [''],
+        question:
+            'Apakah pasien menderita penyakit sepsis perperalis dan post abortus ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Postpartum dan Menyusui',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien sedang dalam pospartum dan menyusui ?',
+        options: [
+          'Kurang dari 48jam',
+          '48jam s/d kurang dari 4 minggu',
+          '4 minggu s/d kurang dari 6 minggu',
+          '6 minggu s/d 6 bulan',
+          'Tidak',
+        ],
       ),
       Question(
         type: 'Nullipara',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita penyakit nullipara ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Usia Remaja',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien usia remaja menarche sampai usia 18 tahun ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Pendarahan Vagina',
-        question: '',
-        options: [''],
+        question:
+            'Apakah pasien mengalami pendarahan per vagina yang tidak dapat dijelaskan ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Mioma Uteri',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita mioma uteri ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Neoplasia Servikal',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita neoplasia servikal ?',
+        options: ['Ya', 'Tidak'],
       ),
       Question(
         type: 'Kanker Serviks',
-        question: '',
-        options: [''],
+        question: 'Apakah pasien menderita kanker serviks sebelum pengobatan ?',
+        options: ['Ya', 'Tidak'],
       ),
     ];
   }

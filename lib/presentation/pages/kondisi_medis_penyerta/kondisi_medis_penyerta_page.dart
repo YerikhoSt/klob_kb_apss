@@ -1,9 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/model/question_model.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/widget/question_widget.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 
+@RoutePage()
 class KondisiMedisPenyertaPage extends StatefulWidget {
   const KondisiMedisPenyertaPage({super.key});
 
@@ -24,6 +27,9 @@ class _KondisiMedisPenyertaPageState extends State<KondisiMedisPenyertaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const PrimaryAppBar(
+        title: 'Kondisi Medis Penyerta',
+      ),
       body: _body(),
     );
   }

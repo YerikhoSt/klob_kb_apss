@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
@@ -7,6 +8,7 @@ import 'package:klob_kb_apps/presentation/pages/home/widget/menu_section.dart';
 
 import '../../../util/constants/sizes.dart';
 
+@RoutePage()
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/util/constants/app_resources.dart';
 
@@ -13,47 +15,47 @@ class MenuSection extends StatelessWidget {
     final listSubMenu = [
       {
         'title': 'Langkah Konseling',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Diagram Kriteria Kelayakan Medis',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Penapisan Berdasarkan Kriteria Kelayakan Medis',
-        'icon': AppIcons.icon,
-        'onTap': () {},
+        'icon': AppIcons.imagePlaceholder,
+        'onTap': () => _navigateToKondisiMedisPenyerta(context),
       },
       {
         'title': 'Penapisan Kehamilan',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Metode Kontrasepsi',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Efektivitas Metode Kontrasepsi',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Prosedur Sebelum Penggunaan Metode Kontrasepsi',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Kontrasepsi Dalam Keadaan Khusus',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
       {
         'title': 'Panduan',
-        'icon': AppIcons.icon,
+        'icon': AppIcons.imagePlaceholder,
         'onTap': () {},
       },
     ];
@@ -67,10 +69,10 @@ class MenuSection extends StatelessWidget {
         ),
         child: Column(
           children: List.generate(
-            (listSubMenu.length / 4).ceil(),
+            (listSubMenu.length / 3).ceil(),
             (index) {
-              int start = index * 4;
-              int end = start + 4;
+              int start = index * 3;
+              int end = start + 3;
               return Padding(
                 padding: index == 0
                     ? EdgeInsets.zero
@@ -85,7 +87,7 @@ class MenuSection extends StatelessWidget {
                       .map(
                         (element) => Container(
                           alignment: Alignment.center,
-                          width: Sizes.screenWidth(context) / 4 - 20,
+                          width: Sizes.screenWidth(context) / 3 - 28,
                           child: SubmenuItem(
                             title: element['title'] as String,
                             iconPath: element['icon'] as String,
@@ -101,5 +103,9 @@ class MenuSection extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _navigateToKondisiMedisPenyerta(BuildContext context) {
+    context.router.push(const KondisiMedisPenyertaRoute());
   }
 }

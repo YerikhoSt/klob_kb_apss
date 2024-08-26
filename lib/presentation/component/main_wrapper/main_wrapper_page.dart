@@ -5,7 +5,6 @@ import 'package:klob_kb_apps/presentation/component/main_wrapper/bloc/drawer_blo
 import 'package:klob_kb_apps/presentation/component/main_wrapper/widget/drawer_widget.dart';
 import 'package:klob_kb_apps/presentation/pages/home/home_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
-import 'package:klob_kb_apps/presentation/pages/mitra_bestari/mitra_bestari_page.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 
