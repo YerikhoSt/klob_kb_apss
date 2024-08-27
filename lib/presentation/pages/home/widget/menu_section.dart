@@ -31,7 +31,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Penapisan Kehamilan',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToPenapisanKehamilan(context),
       },
       {
         'title': 'Metode Kontrasepsi',
@@ -41,7 +41,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Efektivitas Metode Kontrasepsi',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToEfektivitasMetodeKontrasepsi(context),
       },
       {
         'title': 'Prosedur Sebelum Penggunaan Metode Kontrasepsi',
@@ -107,5 +107,13 @@ class MenuSection extends StatelessWidget {
 
   void _navigateToKondisiMedisPenyerta(BuildContext context) {
     context.router.push(const KondisiMedisPenyertaRoute());
+  }
+
+  void _navigateToPenapisanKehamilan(BuildContext context) {
+    context.router.push(const PenapisanKehamilanRoute());
+  }
+
+  void _navigateToEfektivitasMetodeKontrasepsi(BuildContext context) {
+    context.router.push(const EfektivitasMetodeKontrasepsiRoute());
   }
 }

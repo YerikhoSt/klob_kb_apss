@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    EfektivitasMetodeKontrasepsiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EfektivitasMetodeKontrasepsiPage(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -39,7 +45,27 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const PenapisanKehamilanPage(),
       );
     },
+    ProsedurSebelumPenggunaanRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProsedurSebelumPenggunaanPage(),
+      );
+    },
   };
+}
+
+/// generated route for
+/// [EfektivitasMetodeKontrasepsiPage]
+class EfektivitasMetodeKontrasepsiRoute extends PageRouteInfo<void> {
+  const EfektivitasMetodeKontrasepsiRoute({List<PageRouteInfo>? children})
+      : super(
+          EfektivitasMetodeKontrasepsiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EfektivitasMetodeKontrasepsiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -94,6 +120,20 @@ class PenapisanKehamilanRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'PenapisanKehamilanRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProsedurSebelumPenggunaanPage]
+class ProsedurSebelumPenggunaanRoute extends PageRouteInfo<void> {
+  const ProsedurSebelumPenggunaanRoute({List<PageRouteInfo>? children})
+      : super(
+          ProsedurSebelumPenggunaanRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProsedurSebelumPenggunaanRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
