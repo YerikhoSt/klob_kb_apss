@@ -46,7 +46,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Prosedur Sebelum Penggunaan Metode Kontrasepsi',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToProsedurSebelumPenggunaan(context),
       },
       {
         'title': 'Kontrasepsi Dalam Keadaan Khusus',
@@ -115,5 +115,9 @@ class MenuSection extends StatelessWidget {
 
   void _navigateToEfektivitasMetodeKontrasepsi(BuildContext context) {
     context.router.push(const EfektivitasMetodeKontrasepsiRoute());
+  }
+
+  void _navigateToProsedurSebelumPenggunaan(BuildContext context) {
+    context.router.push(const ProsedurSebelumPenggunaanRoute());
   }
 }

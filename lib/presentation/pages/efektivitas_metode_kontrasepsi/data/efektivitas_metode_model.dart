@@ -78,9 +78,10 @@ class EfektivitasMetodeModel {
       EfektivitasMetodeModel(
           metode: 'Spremisida', dipakaiKonsisten: '18', dipakaiBiasa: '29'),
       EfektivitasMetodeModel(
-          metode: 'Tudung Serviks',
-          dipakaiKonsisten: '26:9',
-          dipakaiBiasa: '32:16'),
+        metode: 'Tudung Serviks',
+        dipakaiKonsisten: '26:9',
+        dipakaiBiasa: '32:16',
+      ),
       EfektivitasMetodeModel(
           metode: 'Tidak menggunakan kontrasepsi',
           dipakaiKonsisten: '86',
