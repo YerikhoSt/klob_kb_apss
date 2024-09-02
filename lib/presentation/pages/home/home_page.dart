@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/scroll_view/custom_single_child_scroll_view_wrapper.dart';
-import 'package:klob_kb_apps/presentation/pages/home/widget/carousel_section.dart';
-import 'package:klob_kb_apps/presentation/pages/home/widget/menu_section.dart';
+import 'package:klob_kb_apps/presentation/component/widget/carousel_section.dart';
+import 'package:klob_kb_apps/presentation/component/widget/menu_section.dart';
 
 import '../../../util/constants/sizes.dart';
 

@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../config/theme/app_colors.dart';
+import '../../../config/theme/app_colors.dart';
 
 class CarouselSection extends StatefulWidget {
   const CarouselSection({super.key, required this.carouselData});

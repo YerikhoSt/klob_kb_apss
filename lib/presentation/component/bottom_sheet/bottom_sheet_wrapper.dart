@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
-import 'package:klob_kb_apps/presentation/pages/home/widget/wrapper/custom_wrapper.dart';
+import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrapper.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 
 class PrimaryBottomSheetWrapper extends StatelessWidget {

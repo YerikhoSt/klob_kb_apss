@@ -4,7 +4,7 @@ import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/util/constants/app_resources.dart';
 
-import '../../../../util/constants/sizes.dart';
+import '../../../util/constants/sizes.dart';
 import 'submenu_item.dart';
 
 class MenuSection extends StatelessWidget {

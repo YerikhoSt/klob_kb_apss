@@ -5,7 +5,7 @@ import 'package:klob_kb_apps/helper/bottom_sheet_helper.dart';
 import 'package:klob_kb_apps/presentation/component/bottom_sheet/bottom_sheet_wrapper.dart';
 import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/data/efektivitas_metode_data_source.dart';
 import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/data/efektivitas_metode_model.dart';
-import 'package:klob_kb_apps/presentation/pages/home/widget/wrapper/custom_wrapper.dart';
+import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrapper.dart';
 import 'package:klob_kb_apps/util/constants/app_resources.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
@@ -14,7 +14,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 import '../../../config/theme/app_colors.dart';
 import '../../component/app_bar/app_bar.dart';
-import '../home/widget/wrapper/card_wrapper.dart';
+import '../../component/widget/wrapper/card_wrapper.dart';
 
 @RoutePage()
 class EfektivitasMetodeKontrasepsiPage extends StatefulWidget {
