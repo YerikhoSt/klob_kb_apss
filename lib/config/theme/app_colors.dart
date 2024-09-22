@@ -7,7 +7,7 @@ class AppColors {
 
   static const Color primary = primaryShade500;
   static const Color nearlyWhite = Color(0xFFFFFFFF);
-  static const Color primaryContainer = Color(0xff03447c);
+  static const Color primaryContainer = primaryShade800;
   static const Color secondaryContainer = Color(0xff872100);
   static const Color tertiary = Color(0xff86d2e1);
   static const Color tertiaryContainer = Color(0xff004e59);
@@ -22,17 +22,17 @@ class AppColors {
   static const Color doneColor = Color(0xFF31D9EB);
   static const Color progressColor = Color(0xFF5597FD);
 
-  static const Color primaryShade50 = Color(0xffeff6ff);
-  static const Color primaryShade100 = Color(0xffdbebfe);
-  static const Color primaryShade200 = Color(0xffbfdcfe);
-  static const Color primaryShade300 = Color(0xff94c7fc);
-  static const Color primaryShade400 = Color(0xff61a8f9);
-  static const Color primaryShade500 = Color(0xff307ef4);
-  static const Color primaryShade600 = Color(0xff2668ea);
-  static const Color primaryShade700 = Color(0xff1e52d7);
-  static const Color primaryShade800 = Color(0xff1f44ae);
-  static const Color primaryShade900 = Color(0xff1f3c89);
-  static const Color primaryShade950 = Color(0xff172654);
+  static const Color primaryShade50 = Color(0xffecf9f8);
+  static const Color primaryShade100 = Color(0xffc5eceb);
+  static const Color primaryShade200 = Color(0xff9fdfde);
+  static const Color primaryShade300 = Color(0xff79d3d1);
+  static const Color primaryShade400 = Color(0xff52c6c4);
+  static const Color primaryShade500 = Color(0xff3DB9B7);
+  static const Color primaryShade600 = Color(0xff39adab);
+  static const Color primaryShade700 = Color(0xff2c8685);
+  static const Color primaryShade800 = Color(0xff20605f);
+  static const Color primaryShade900 = Color(0xff133a39);
+  static const Color primaryShade950 = Color(0xff061313);
 
   static const successMain = Color(0xFF51D868);
   static const successSurface = Color(0xFFEDFFF2);
@@ -49,14 +49,14 @@ class AppColors {
   static const dangerPressed = Color(0xFF8A231D);
   static const dangerFocused = Color(0xFFFEDDDB);
 
-  static const primaryMain = Color(0xFF307EF4);
-  static const primaryMainLight = Color(0xFF639FF8);
-  static const primarySurface = Color(0xFF1F5EB8);
-  static const primarySurfaceLight = Color(0xFF639FF8);
-  static const primaryBorder = Color(0xFF2566C2);
-  static const primaryHover = Color(0xFF5295F6);
-  static const primaryPressed = Color(0xFF2556A8);
-  static const primaryFocused = Color(0xFF4A8FF7);
+  static const primaryMain = primaryShade500;
+  static const primaryMainLight = Color(0xFF7DD7D6);
+  static const primarySurface = Color(0xFF2C8A89);
+  static const primarySurfaceLight = Color(0xFF55C2C0);
+  static const primaryBorder = Color(0xFF4ABDBC);
+  static const primaryHover = Color(0xFF36A6A5);
+  static const primaryPressed = Color(0xFF2B8D8B);
+  static const primaryFocused = Color(0xFF4DC7C6);
 
   static const secondaryMain = Color(0xFFFF8A00);
   static const secondaryMainLight = Color(0xFFFFA733);
