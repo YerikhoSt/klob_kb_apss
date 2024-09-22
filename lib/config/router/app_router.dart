@@ -5,6 +5,7 @@ import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/ketentuan
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_detail_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
+import 'package:klob_kb_apps/presentation/pages/langkah_konseling/langkah_konseling_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/penapisan_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/prosedur_sebelum_penggunaan_page.dart';
@@ -35,6 +36,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: MetodeKontrasepsiRoute.page,
           path: '/metodekontrasepsi',
+        ),
+        AutoRoute(
+          page: LangkahKonselingRoute.page,
+          path: '/langkahkonseling',
         ),
         AutoRoute(
             page: KondisiMedisRoute.page,

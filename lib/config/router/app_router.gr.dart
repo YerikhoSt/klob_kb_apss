@@ -56,6 +56,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const KondisiMedisPenyertaPage(),
       );
     },
+    LangkahKonselingRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const LangkahKonselingPage(),
+      );
+    },
     MetodeKontrasepsiRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -187,6 +193,20 @@ class KondisiMedisPenyertaRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'KondisiMedisPenyertaRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [LangkahKonselingPage]
+class LangkahKonselingRoute extends PageRouteInfo<void> {
+  const LangkahKonselingRoute({List<PageRouteInfo>? children})
+      : super(
+          LangkahKonselingRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LangkahKonselingRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
