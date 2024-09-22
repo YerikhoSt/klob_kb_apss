@@ -1,7 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:klob_kb_apps/presentation/component/main_wrapper/main_wrapper_page.dart';
+import 'package:flutter/material.dart';
 import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/efektivitas_metode_kontrasepsi_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/ketentuan_kondisi_medis.dart';
+import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_detail_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/penapisan_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/prosedur_sebelum_penggunaan_page.dart';
 
@@ -14,7 +18,9 @@ class AppRouter extends _$AppRouter {
   List<AutoRoute> get routes => [
         // AutoRoute(page: MainWrapperRoute.page, path: '/', initial: true),
         AutoRoute(page: HomeRoute.page, path: '/', initial: true),
-        AutoRoute(page: KondisiMedisPenyertaRoute.page, path: '/kondisimedis'),
+        AutoRoute(
+            page: KondisiMedisPenyertaDetailRoute.page,
+            path: '/kondisimedisdetail'),
         AutoRoute(
             page: EfektivitasMetodeKontrasepsiRoute.page,
             path: '/efektivitasmetodekontrasepsi'),
@@ -26,5 +32,22 @@ class AppRouter extends _$AppRouter {
           page: ProsedurSebelumPenggunaanRoute.page,
           path: '/prosedursebelumpenggunaan',
         ),
+        AutoRoute(
+          page: MetodeKontrasepsiRoute.page,
+          path: '/metodekontrasepsi',
+        ),
+        AutoRoute(
+            page: KondisiMedisRoute.page,
+            path: '/kondisimedis',
+            children: [
+              AutoRoute(
+                page: KondisiMedisPenyertaRoute.page,
+                path: 'kondisimedispenyerta',
+              ),
+              AutoRoute(
+                page: KetentuanKondisiMedisRoute.page,
+                path: 'ketentuankondisimedis',
+              ),
+            ]),
       ];
 }

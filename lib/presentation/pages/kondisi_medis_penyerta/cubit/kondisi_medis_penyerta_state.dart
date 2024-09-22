@@ -11,3 +11,27 @@ final class ItemLoaded extends KondisiMedisPenyertaState {
 
   const ItemLoaded(this.data);
 }
+
+final class MergedMapItemState extends KondisiMedisPenyertaState {
+  final Map<String, String> mergedMap;
+
+  const MergedMapItemState(
+    this.mergedMap,
+  );
+}
+
+final class DataMapItemState extends KondisiMedisPenyertaState {
+  final List<Map<String, String>>? dataMapItem;
+
+  const DataMapItemState(this.dataMapItem);
+}
+
+final class SelectedMapItemState extends KondisiMedisPenyertaState {
+  final Map<String, String> mapItem;
+  final int index;
+
+  const SelectedMapItemState(
+    this.mapItem,
+    this.index,
+  );
+}

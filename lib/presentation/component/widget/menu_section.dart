@@ -106,7 +106,7 @@ class MenuSection extends StatelessWidget {
   }
 
   void _navigateToKondisiMedisPenyerta(BuildContext context) {
-    context.router.push(const KondisiMedisPenyertaRoute());
+    context.router.push(const KondisiMedisRoute());
   }
 
   void _navigateToPenapisanKehamilan(BuildContext context) {

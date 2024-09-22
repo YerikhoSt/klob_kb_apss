@@ -27,16 +27,39 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomePage(),
       );
     },
+    KetentuanKondisiMedisRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KetentuanKondisiMedisPage(),
+      );
+    },
+    KondisiMedisRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KondisiMedisPage(),
+      );
+    },
+    KondisiMedisPenyertaDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<KondisiMedisPenyertaDetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: KondisiMedisPenyertaDetailPage(
+          mergedData: args.mergedData,
+          selectedData: args.selectedData,
+          key: args.key,
+        ),
+      );
+    },
     KondisiMedisPenyertaRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const KondisiMedisPenyertaPage(),
       );
     },
-    MainWrapperRoute.name: (routeData) {
+    MetodeKontrasepsiRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: WrappedRoute(child: const MainWrapperPage()),
+        child: const MetodeKontrasepsiPage(),
       );
     },
     PenapisanKehamilanRoute.name: (routeData) {
@@ -83,6 +106,78 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [KetentuanKondisiMedisPage]
+class KetentuanKondisiMedisRoute extends PageRouteInfo<void> {
+  const KetentuanKondisiMedisRoute({List<PageRouteInfo>? children})
+      : super(
+          KetentuanKondisiMedisRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KetentuanKondisiMedisRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KondisiMedisPage]
+class KondisiMedisRoute extends PageRouteInfo<void> {
+  const KondisiMedisRoute({List<PageRouteInfo>? children})
+      : super(
+          KondisiMedisRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KondisiMedisRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KondisiMedisPenyertaDetailPage]
+class KondisiMedisPenyertaDetailRoute
+    extends PageRouteInfo<KondisiMedisPenyertaDetailRouteArgs> {
+  KondisiMedisPenyertaDetailRoute({
+    required Map<String, String> mergedData,
+    required List<Map<String, String>> selectedData,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          KondisiMedisPenyertaDetailRoute.name,
+          args: KondisiMedisPenyertaDetailRouteArgs(
+            mergedData: mergedData,
+            selectedData: selectedData,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'KondisiMedisPenyertaDetailRoute';
+
+  static const PageInfo<KondisiMedisPenyertaDetailRouteArgs> page =
+      PageInfo<KondisiMedisPenyertaDetailRouteArgs>(name);
+}
+
+class KondisiMedisPenyertaDetailRouteArgs {
+  const KondisiMedisPenyertaDetailRouteArgs({
+    required this.mergedData,
+    required this.selectedData,
+    this.key,
+  });
+
+  final Map<String, String> mergedData;
+
+  final List<Map<String, String>> selectedData;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'KondisiMedisPenyertaDetailRouteArgs{mergedData: $mergedData, selectedData: $selectedData, key: $key}';
+  }
+}
+
+/// generated route for
 /// [KondisiMedisPenyertaPage]
 class KondisiMedisPenyertaRoute extends PageRouteInfo<void> {
   const KondisiMedisPenyertaRoute({List<PageRouteInfo>? children})
@@ -97,15 +192,15 @@ class KondisiMedisPenyertaRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [MainWrapperPage]
-class MainWrapperRoute extends PageRouteInfo<void> {
-  const MainWrapperRoute({List<PageRouteInfo>? children})
+/// [MetodeKontrasepsiPage]
+class MetodeKontrasepsiRoute extends PageRouteInfo<void> {
+  const MetodeKontrasepsiRoute({List<PageRouteInfo>? children})
       : super(
-          MainWrapperRoute.name,
+          MetodeKontrasepsiRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'MainWrapperRoute';
+  static const String name = 'MetodeKontrasepsiRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

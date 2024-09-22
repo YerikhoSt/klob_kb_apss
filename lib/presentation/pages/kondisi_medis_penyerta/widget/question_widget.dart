@@ -36,11 +36,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
               ),
               value: option,
               groupValue: widget.question.selectedOption,
-              onChanged: widget.onOptionSelected,
+              onChanged: widget.onOptionSelected,                                          
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
             )),
-      ],
+      ],  
     );
   }
 }
