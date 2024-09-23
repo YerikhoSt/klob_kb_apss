@@ -1,8 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
+import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
+import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
 class LangkahKonselingPage extends StatelessWidget {
@@ -35,7 +38,6 @@ Pertama, doronglah klien untuk menunjukkan keinginannya an mengajukan pertanyaan
 Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien berdasarkan kriteria kelayakan medis. Daftar pemeriksaan yang perlu dilakukan dapat dilihat di menu Bantulah klien mempertimbangkan pilihan metode kontrasepsinya dengan memperhatikan kriteria-kriteria kelayakan medis. Buka menu "Penapusan Klien Berdasarkan Kriteria Kelayakan Medis" untuk menjawab beberapa pertanyaan yang dapat membantu Anda menentukan alternatif pilihan metode kontrasepsi yang aman bagi pasien. Pertimbangan juga dapat dilakukan dengan menggunakan diagram lingkaran yang ada di menu "Diagram Lingkaran Kriteria Kelayakan Medis." Untuk pasien engan keadaan khusus" Tanyakan Kembali keinginan klien mengenai metode kontrasepsi pilihannya.Tanyakan juga apakah pasangannya akan memberikan dukungan terhadap pilihannya tersebut dengan pasangannya. kemudian, yakinkan bahwa klien telah membuat suatu keputusan yang tepat dengan menanyakan: Apakah Anda sudah memutuskan pilihan jenis kontrasepsi?Atau apa jenis kontrasepsi terpilih yang akan digunakan?
 
 *  **J: jelaskan secara lengkap bagaimana menggunakan kontrasepsi pilihannya.**
-
   Setelah klien memilih jenis kontrasepsinya.jika diperlukan,perlihatkan alat/obat kontrasepsinya. Jelaskan bagaimana alat/obat kontrasepsi tersebut digunakan dan bagaimana cara penggunaannya. Sekali lagi doronglah klien untuk bertanya dan petugas menjawab secara jelas dan terbuka. Beri penjelasan juga tentang manfaat ganda metode kontrasepsi,misalnya kondom yang dapat mencegah infeksi menular seksual (IMS). Cek pengetahuan klien entang penggunaan kontrasepsi pilihannya dan puji klien apabila dapat menjawab dengan benar.
 
   Jika klien ingin menggunakan metode kontrasepsi ersebut saat ini juga, lakukan penapisan kehamilan yang da dalam menu "Penapusan Kehamilan".
@@ -46,6 +48,15 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: const PrimaryAppBar(
+        title: 'Langkah Konseling',
+      ),
+      body: _body(context),
+    );
+  }
+
+  Widget _body(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Sizes.p16),
       child: Container(
@@ -57,10 +68,17 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
             borderRadius: BorderRadius.circular(Sizes.p16)),
         padding: const EdgeInsets.symmetric(
             horizontal: Sizes.p16, vertical: Sizes.p16),
-        child: const Column(
+        child: Column(
           children: [
-            MarkdownBody(data: langkahKonselingMd1),
-            MarkdownBody(data: langkahKonselingMd2),
+            MarkdownBody(
+              data: langkahKonselingMd1,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(16),
+            MarkdownBody(
+              data: langkahKonselingMd2,
+              styleSheet: context.markdownStyleSheet,
+            ),
           ],
         ),
       ),

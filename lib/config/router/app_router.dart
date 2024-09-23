@@ -6,6 +6,10 @@ import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_m
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_detail_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
 import 'package:klob_kb_apps/presentation/pages/langkah_konseling/langkah_konseling_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/combined_hormonal_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/female_sterillization_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/progestogen__injectables_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/progrestogen_only_pills_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/penapisan_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/prosedur_sebelum_penggunaan_page.dart';
@@ -36,6 +40,23 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: MetodeKontrasepsiRoute.page,
           path: '/metodekontrasepsi',
+          children: [],
+        ),
+        AutoRoute(
+          page: CombinedHormonalRoute.page,
+          path: '/combinedhormonal',
+        ),
+        AutoRoute(
+          page: FemaleSterillizationRoute.page,
+          path: '/femalesterillization',
+        ),
+        AutoRoute(
+          page: ProgestogenInjectablesRoute.page,
+          path: '/progestogeninjectables',
+        ),
+        AutoRoute(
+          page: ProgrestogenOnlyPillsRoute.page,
+          path: '/progrestogenonlypills',
         ),
         AutoRoute(
           page: LangkahKonselingRoute.page,

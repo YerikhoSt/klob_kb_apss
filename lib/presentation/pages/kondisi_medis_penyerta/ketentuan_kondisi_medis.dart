@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
 class KetentuanKondisiMedisPage extends StatelessWidget {
@@ -18,8 +20,9 @@ class KetentuanKondisiMedisPage extends StatelessWidget {
 **3:** Metode Kontrasepsi tidak direkomendasikan
 
 **4:** Metode Kontrasepsi tidak dapat digunakan.
+   ''';
 
-
+  static const String ketentuanMd2 = '''
 **Kategori Untuk Vasektomi dan Tubektomi:** 
 
 **A:** Accept/Dapat Diterima (Tidak ada alasan medis untuk menolak sterilisasi). 
@@ -30,7 +33,9 @@ class KetentuanKondisiMedisPage extends StatelessWidget {
 
 **S:** Special/Khusus (Prosedur harus dilakukan oleh operator yang berpengalaman dan peralatan harus lengkap dan tersedia untuk anestesi umum, dan harus dipikirkan regimen anestesi yang tepat).
 
+''';
 
+  static const String ketentuanMd3 = '''
 **Kondisi:** 
 
 **A:** Jika kondisi timbul saat menggunakan metode kontrasepsi ini, kontrasepsi tersebut dapat dilanjutkan selama pengobatan 
@@ -84,8 +89,7 @@ class KetentuanKondisiMedisPage extends StatelessWidget {
 **Y:** Jika terapi antiretroviral dengan EFV, NVP, ATV/r, LPV/r, DRV/r, RTV: KOK/P/CVK, KIK, PP, NET-EN, Implan =2. DMPA =1. Untuk semua NRTI, ETR, RPV, RAL setiap metode =1. Lihat sampul untuk nama lengkap obat-obat tersebut.   
 
 **Z:** Jika WHO stadium 3 atau 4 (penyakit HIV klinis berat atau lanjut) AKDR =3
-   ''';
-
+''';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -99,7 +103,24 @@ class KetentuanKondisiMedisPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(Sizes.p16)),
         padding: const EdgeInsets.symmetric(
             horizontal: Sizes.p16, vertical: Sizes.p16),
-        child: const MarkdownBody(data: ketentuanMd),
+        child: Column(
+          children: [
+            MarkdownBody(
+              data: ketentuanMd,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(20),
+            MarkdownBody(
+              data: ketentuanMd2,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(20),
+            MarkdownBody(
+              data: ketentuanMd3,
+              styleSheet: context.markdownStyleSheet,
+            ),
+          ],
+        ),
       ),
     );
   }

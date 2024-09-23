@@ -16,7 +16,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Langkah Konseling',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToLangkahKonseling(context),
       },
       {
         'title': 'Diagram Kriteria Kelayakan Medis',
@@ -36,7 +36,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Metode Kontrasepsi',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToMetodeKontrasepsi(context),
       },
       {
         'title': 'Efektivitas Metode Kontrasepsi',
@@ -105,12 +105,20 @@ class MenuSection extends StatelessWidget {
     );
   }
 
+  void _navigateToLangkahKonseling(BuildContext context) {
+    context.router.push(const LangkahKonselingRoute());
+  }
+
   void _navigateToKondisiMedisPenyerta(BuildContext context) {
     context.router.push(const KondisiMedisRoute());
   }
 
   void _navigateToPenapisanKehamilan(BuildContext context) {
     context.router.push(const PenapisanKehamilanRoute());
+  }
+
+  void _navigateToMetodeKontrasepsi(BuildContext context) {
+    context.router.push(const MetodeKontrasepsiRoute());
   }
 
   void _navigateToEfektivitasMetodeKontrasepsi(BuildContext context) {

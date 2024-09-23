@@ -197,8 +197,8 @@ class Question {
             'suntikProgestin': '3',
             'implan': '2',
             'akdrLevonorgestrel': '2',
-            'akdrCopper': 'S',
-            'tubektomi': '',
+            'akdrCopper': '1',
+            'tubektomi': 'S',
             'vasektomi': '',
           },
           {

@@ -5,6 +5,7 @@ import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/scroll_view/custom_single_child_scroll_view_wrapper.dart';
 import 'package:klob_kb_apps/presentation/component/widget/carousel_section.dart';
 import 'package:klob_kb_apps/presentation/component/widget/menu_section.dart';
+import 'package:klob_kb_apps/util/constants/app_resources.dart';
 
 import '../../../util/constants/sizes.dart';
 
@@ -26,9 +27,9 @@ class HomePage extends StatelessWidget {
 
   Widget _mainSection() {
     List<String> carouselData = [
-      "assets/images/carousel_1.png",
-      "assets/images/carousel_1.png",
-      "assets/images/carousel_1.png",
+      AppIcons.imagePlaceholder,
+      AppIcons.imagePlaceholder,
+      AppIcons.imagePlaceholder,
     ];
     return SafeArea(
       child: Center(

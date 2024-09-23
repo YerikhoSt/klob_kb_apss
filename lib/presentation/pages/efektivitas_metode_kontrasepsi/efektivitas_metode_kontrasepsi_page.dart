@@ -65,7 +65,8 @@ class _EfektivitasMetodeKontrasepsiPageState
                   child: Text(
                     'Metode Kontrasepsi',
                     softWrap: true,
-                    style: context.bodyMedium?.bold,
+                    style:
+                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
                     textAlign: TextAlign.center,
                   ))),
           GridColumn(
@@ -76,7 +77,8 @@ class _EfektivitasMetodeKontrasepsiPageState
                   alignment: Alignment.center,
                   child: Text(
                     'Dipakai secara tepat dan konsisten',
-                    style: context.bodyMedium?.bold,
+                    style:
+                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
                     textAlign: TextAlign.center,
                     softWrap: true,
                   ))),
@@ -87,7 +89,8 @@ class _EfektivitasMetodeKontrasepsiPageState
                   alignment: Alignment.center,
                   child: Text(
                     'Dipakai secara biasa',
-                    style: context.bodyMedium?.bold,
+                    style:
+                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
                     textAlign: TextAlign.center,
                     softWrap: true,
                   ))),
@@ -130,7 +133,8 @@ class _EfektivitasMetodeKontrasepsiPageState
           child: CustomColumn(children: [
             Text(
               'PEDOMAN',
-              style: context.textTheme.bodyLarge?.bold,
+              style: context.textTheme.bodyLarge?.bold
+                  .toColor(AppColors.neutral100),
             ),
             const Gap(16),
             Row(

@@ -67,7 +67,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text(
                     'Prosedur',
                     softWrap: true,
-                    style: context.bodyMedium?.bold,
+                    style:
+                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
                   ))),
           GridColumn(
               width: 120,
@@ -79,7 +80,8 @@ class _ProsedurSebelumPenggunaanPageState
                     'Kontrasepsi Kombinasi',
                     softWrap: true,
                     textAlign: TextAlign.center,
-                    style: context.bodyMedium?.bold,
+                    style:
+                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
                   ))),
           GridColumn(
               width: 120,
@@ -90,7 +92,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Suntikan Kombinasi',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'pilPogestin',
@@ -100,7 +103,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Pil Pogestin',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'suntikanPogestin',
@@ -110,7 +114,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Suntikan Pogestin',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'implan',
@@ -120,7 +125,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Implan',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'iud',
@@ -130,7 +136,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('OUD/AKDR',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'koyoKombinasi',
@@ -140,7 +147,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Koyo Kombinasi',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'cincinVagina',
@@ -150,7 +158,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Cincin Vagina',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'spermisida',
@@ -160,7 +169,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Spermisida',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'tubektomi',
@@ -170,7 +180,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Tubektomi',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
           GridColumn(
               width: 120,
               columnName: 'vasektomi',
@@ -180,7 +191,8 @@ class _ProsedurSebelumPenggunaanPageState
                   child: Text('Vasektomi',
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      style: context.bodyMedium?.bold))),
+                      style: context.bodyMedium?.bold
+                          .toColor(AppColors.neutral100)))),
         ],
         frozenColumnsCount: 1,
       ),

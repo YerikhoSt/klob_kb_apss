@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CombinedHormonalRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CombinedHormonalPage(),
+      );
+    },
     EfektivitasMetodeKontrasepsiRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const EfektivitasMetodeKontrasepsiPage(),
+      );
+    },
+    FemaleSterillizationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FemaleSterillizationPage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -74,6 +86,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const PenapisanKehamilanPage(),
       );
     },
+    ProgestogenInjectablesRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgestogenInjectablesPage(),
+      );
+    },
+    ProgrestogenOnlyPillsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProgrestogenOnlyPillsPage(),
+      );
+    },
     ProsedurSebelumPenggunaanRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -81,6 +105,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [CombinedHormonalPage]
+class CombinedHormonalRoute extends PageRouteInfo<void> {
+  const CombinedHormonalRoute({List<PageRouteInfo>? children})
+      : super(
+          CombinedHormonalRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CombinedHormonalRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -93,6 +131,20 @@ class EfektivitasMetodeKontrasepsiRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'EfektivitasMetodeKontrasepsiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FemaleSterillizationPage]
+class FemaleSterillizationRoute extends PageRouteInfo<void> {
+  const FemaleSterillizationRoute({List<PageRouteInfo>? children})
+      : super(
+          FemaleSterillizationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FemaleSterillizationRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -235,6 +287,34 @@ class PenapisanKehamilanRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'PenapisanKehamilanRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProgestogenInjectablesPage]
+class ProgestogenInjectablesRoute extends PageRouteInfo<void> {
+  const ProgestogenInjectablesRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgestogenInjectablesRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgestogenInjectablesRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProgrestogenOnlyPillsPage]
+class ProgrestogenOnlyPillsRoute extends PageRouteInfo<void> {
+  const ProgrestogenOnlyPillsRoute({List<PageRouteInfo>? children})
+      : super(
+          ProgrestogenOnlyPillsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProgrestogenOnlyPillsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

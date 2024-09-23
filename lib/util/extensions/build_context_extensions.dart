@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:klob_kb_apps/config/theme/app_colors.dart';
+import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 
 extension XTextTheme on BuildContext {
   TextTheme get textTheme => Theme.of(this).textTheme;
@@ -18,6 +21,9 @@ extension XTextTheme on BuildContext {
   TextStyle? get labelLarge => textTheme.labelLarge;
   TextStyle? get labelMedium => textTheme.labelMedium;
   TextStyle? get labelSmall => textTheme.labelSmall;
+
+  MarkdownStyleSheet get markdownStyleSheet => MarkdownStyleSheet(
+      p: bodyMedium?.toSize(16).toColor(AppColors.neutral100));
 }
 
 extension XSnackBar on BuildContext {
