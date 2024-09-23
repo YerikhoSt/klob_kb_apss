@@ -68,6 +68,24 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const KondisiMedisPenyertaPage(),
       );
     },
+    KontrasepsiDalamKeadaanKhususRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KontrasepsiDalamKeadaanKhususPage(),
+      );
+    },
+    KontrasepsiDaruratRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KontrasepsiDaruratPage(),
+      );
+    },
+    KontrasepsiPascaKehamilanRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KontrasepsiPascaKehamilanPage(),
+      );
+    },
     LangkahKonselingRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -245,6 +263,48 @@ class KondisiMedisPenyertaRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'KondisiMedisPenyertaRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KontrasepsiDalamKeadaanKhususPage]
+class KontrasepsiDalamKeadaanKhususRoute extends PageRouteInfo<void> {
+  const KontrasepsiDalamKeadaanKhususRoute({List<PageRouteInfo>? children})
+      : super(
+          KontrasepsiDalamKeadaanKhususRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KontrasepsiDalamKeadaanKhususRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KontrasepsiDaruratPage]
+class KontrasepsiDaruratRoute extends PageRouteInfo<void> {
+  const KontrasepsiDaruratRoute({List<PageRouteInfo>? children})
+      : super(
+          KontrasepsiDaruratRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KontrasepsiDaruratRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KontrasepsiPascaKehamilanPage]
+class KontrasepsiPascaKehamilanRoute extends PageRouteInfo<void> {
+  const KontrasepsiPascaKehamilanRoute({List<PageRouteInfo>? children})
+      : super(
+          KontrasepsiPascaKehamilanRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KontrasepsiPascaKehamilanRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

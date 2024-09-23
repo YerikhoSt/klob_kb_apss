@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 
-class KondisiMedisAppBar extends StatelessWidget
+class KontrasepsiDalamKeadaanKhususAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const KondisiMedisAppBar({
+  const KontrasepsiDalamKeadaanKhususAppBar({
     super.key,
     required this.tabController,
   });
@@ -14,7 +14,7 @@ class KondisiMedisAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return PrimaryAppBar(
-      title: 'Kondisi Medis Penyerta',
+      title: 'Kontrasepsi Dalam Keadaan Khusus',
       preferredSize: preferredSize,
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(0),
@@ -39,15 +39,17 @@ class KondisiMedisAppBar extends StatelessWidget
                 tabs: const [
                   Tab(
                       child: Text(
-                    'Kondisi Medis',
-                    style: TextStyle(
+                    'Kontrasepsi Darurat',
+                    textAlign: TextAlign.center,
+                        style: TextStyle(
                         fontSize: 14,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600),
                   )),
                   Tab(
                       child: Text(
-                    'Ketentuan',
+                    'Kontrasepsi Pasca Kehamilan',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
                       fontFamily: 'Poppins',

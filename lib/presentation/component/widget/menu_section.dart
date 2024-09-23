@@ -51,7 +51,7 @@ class MenuSection extends StatelessWidget {
       {
         'title': 'Kontrasepsi Dalam Keadaan Khusus',
         'icon': AppIcons.imagePlaceholder,
-        'onTap': () {},
+        'onTap': () => _navigateToKontrasepsiDalamKeadaanKhusus(context),
       },
       {
         'title': 'Panduan',
@@ -127,5 +127,9 @@ class MenuSection extends StatelessWidget {
 
   void _navigateToProsedurSebelumPenggunaan(BuildContext context) {
     context.router.push(const ProsedurSebelumPenggunaanRoute());
+  }
+
+  void _navigateToKontrasepsiDalamKeadaanKhusus(BuildContext context) {
+    context.router.push(const KontrasepsiDalamKeadaanKhususRoute());
   }
 }

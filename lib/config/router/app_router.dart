@@ -5,6 +5,9 @@ import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/ketentuan
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_detail_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_penyerta_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus/kontrasepsi_dalam_keadaan_khusus_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus/kontrasepsi_darurat_page.dart';
+import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus/kontrasepsi_pasca_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/langkah_konseling/langkah_konseling_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/combined_hormonal_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/female_sterillization_page.dart';
@@ -40,27 +43,26 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: MetodeKontrasepsiRoute.page,
           path: '/metodekontrasepsi',
-          children: [],
         ),
         AutoRoute(
           page: CombinedHormonalRoute.page,
-          path: '/combinedhormonal',
+          path: '/metodekontrasepsi/combinedhormonal',
         ),
         AutoRoute(
           page: FemaleSterillizationRoute.page,
-          path: '/femalesterillization',
+          path: '/metodekontrasepsi/femalesterillization',
         ),
         AutoRoute(
           page: ProgestogenInjectablesRoute.page,
-          path: '/progestogeninjectables',
+          path: '/metodekontrasepsi/progestogeninjectables',
         ),
         AutoRoute(
           page: ProgrestogenOnlyPillsRoute.page,
-          path: '/progrestogenonlypills',
+          path: '/metodekontrasepsi/progrestogenonlypills',
         ),
         AutoRoute(
           page: LangkahKonselingRoute.page,
-          path: '/langkahkonseling',
+          path: '/metodekontrasepsi/langkahkonseling',
         ),
         AutoRoute(
             page: KondisiMedisRoute.page,
@@ -73,6 +75,19 @@ class AppRouter extends _$AppRouter {
               AutoRoute(
                 page: KetentuanKondisiMedisRoute.page,
                 path: 'ketentuankondisimedis',
+              ),
+            ]),
+        AutoRoute(
+            page: KontrasepsiDalamKeadaanKhususRoute.page,
+            path: '/kontrasepsidalamkeadaankhusus',
+            children: [
+              AutoRoute(
+                page: KontrasepsiDaruratRoute.page,
+                path: 'kontrasepsidarurat',
+              ),
+              AutoRoute(
+                page: KontrasepsiPascaKehamilanRoute.page,
+                path: 'kontrasepsipascakehamilan',
               ),
             ]),
       ];

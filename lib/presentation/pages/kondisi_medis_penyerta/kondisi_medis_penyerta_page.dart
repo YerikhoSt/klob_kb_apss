@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
-import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/presentation/component/bottom_sheet/bottom_sheet_wrapper.dart';
 import 'package:klob_kb_apps/presentation/component/buttons/primary_button.dart';
 import 'package:klob_kb_apps/presentation/component/scroll_view/custom_single_child_scroll_view_wrapper.dart';
