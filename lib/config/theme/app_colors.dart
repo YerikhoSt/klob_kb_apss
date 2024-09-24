@@ -50,13 +50,13 @@ class AppColors {
   static const dangerFocused = Color(0xFFFEDDDB);
 
   static const primaryMain = primaryShade500;
-  static const primaryMainLight = Color(0xFF7DD7D6);
-  static const primarySurface = Color(0xFF2C8A89);
-  static const primarySurfaceLight = Color(0xFF55C2C0);
-  static const primaryBorder = Color(0xFF4ABDBC);
-  static const primaryHover = Color(0xFF36A6A5);
-  static const primaryPressed = Color(0xFF2B8D8B);
-  static const primaryFocused = Color(0xFF4DC7C6);
+  static const primaryMainLight = Color(0xFF83DFDD);
+  static const primarySurface = Color(0xFFE9F7F6);
+  static const primarySurfaceLight = Color(0xFFF4FBFB);
+  static const primaryBorder = Color(0xFFCCE8E7);
+  static const primaryHover = Color(0xFF38ACA9);
+  static const primaryPressed = Color(0xFF38ACA9);
+  static const primaryFocused = Color(0xFFCCEDED);
 
   static const secondaryMain = Color(0xFFFF8A00);
   static const secondaryMainLight = Color(0xFFFFA733);

@@ -42,7 +42,7 @@ class SnackbarHelper {
       ..showSnackBar(
         SnackBar(
           content: Text(message),
-          backgroundColor: AppColors.successMain,
+          backgroundColor: AppColors.primary,
           behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Sizes.p8),
