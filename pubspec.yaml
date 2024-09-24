@@ -24,6 +24,7 @@ dependencies:
   syncfusion_flutter_datagrid: ^26.2.10
   percent_indicator: ^4.2.3
   flutter_markdown: ^0.7.3+1
+  photo_view: ^0.15.0
 
 dev_dependencies:
   flutter_test:

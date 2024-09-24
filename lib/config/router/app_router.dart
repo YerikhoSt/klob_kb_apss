@@ -15,6 +15,7 @@ import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/p
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/progrestogen_only_pills_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/penapisan_kehamilan_page.dart';
+import 'package:klob_kb_apps/presentation/pages/photo_detail/photo_detail_page.dart';
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/prosedur_sebelum_penggunaan_page.dart';
 
 import '../../presentation/pages/home/home_page.dart';
@@ -63,6 +64,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: LangkahKonselingRoute.page,
           path: '/metodekontrasepsi/langkahkonseling',
+        ),
+        AutoRoute(
+          page: PhotoDetailRoute.page,
+          path: '/photodetail',
         ),
         AutoRoute(
             page: KondisiMedisRoute.page,

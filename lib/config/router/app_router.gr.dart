@@ -104,6 +104,17 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const PenapisanKehamilanPage(),
       );
     },
+    PhotoDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<PhotoDetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: PhotoDetailPage(
+          key: args.key,
+          photoUrl: args.photoUrl,
+          pageTitle: args.pageTitle,
+        ),
+      );
+    },
     ProgestogenInjectablesRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -349,6 +360,49 @@ class PenapisanKehamilanRoute extends PageRouteInfo<void> {
   static const String name = 'PenapisanKehamilanRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PhotoDetailPage]
+class PhotoDetailRoute extends PageRouteInfo<PhotoDetailRouteArgs> {
+  PhotoDetailRoute({
+    Key? key,
+    required String photoUrl,
+    String? pageTitle,
+    List<PageRouteInfo>? children,
+  }) : super(
+          PhotoDetailRoute.name,
+          args: PhotoDetailRouteArgs(
+            key: key,
+            photoUrl: photoUrl,
+            pageTitle: pageTitle,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'PhotoDetailRoute';
+
+  static const PageInfo<PhotoDetailRouteArgs> page =
+      PageInfo<PhotoDetailRouteArgs>(name);
+}
+
+class PhotoDetailRouteArgs {
+  const PhotoDetailRouteArgs({
+    this.key,
+    required this.photoUrl,
+    this.pageTitle,
+  });
+
+  final Key? key;
+
+  final String photoUrl;
+
+  final String? pageTitle;
+
+  @override
+  String toString() {
+    return 'PhotoDetailRouteArgs{key: $key, photoUrl: $photoUrl, pageTitle: $pageTitle}';
+  }
 }
 
 /// generated route for
