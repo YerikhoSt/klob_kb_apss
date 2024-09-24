@@ -2,8 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:gap/gap.dart';
+import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
+import 'package:klob_kb_apps/util/constants/app_resources.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
@@ -74,7 +76,22 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
               data: langkahKonselingMd1,
               styleSheet: context.markdownStyleSheet,
             ),
-            const Gap(16),
+            const Gap(Sizes.p16),
+            GestureDetector(
+              onTap: () => _navigateToPhotoDetail(context,
+                  AppIcons.imagelangkahKonseling, 'Pilihan Metode Kontrasepsi'),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Sizes.p16),
+                ),
+                alignment: Alignment.center,
+                child: Image.asset(
+                  AppIcons.imagePlaceholder,
+                ),
+              ),
+            ),
+            const Gap(Sizes.p16),
             MarkdownBody(
               data: langkahKonselingMd2,
               styleSheet: context.markdownStyleSheet,
@@ -83,5 +100,10 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
         ),
       ),
     );
+  }
+
+  void _navigateToPhotoDetail(
+      BuildContext context, String imageUrl, String title) {
+    context.router.push(PhotoDetailRoute(photoUrl: imageUrl, pageTitle: title));
   }
 }
