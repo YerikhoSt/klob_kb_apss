@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:gap/gap.dart';
+import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
+import 'package:klob_kb_apps/util/constants/app_resources.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
@@ -24,16 +27,22 @@ Digunakan dalam 5 hari pasca senggama yang tidak terlindung dengan kontrasepsi y
   * AKDR lepas  
   * Klien terlambat suntik DMPA lebih dari 4 minggu atau terlambat suntuk NET-EN lebih dari 2 minggu, atau terlambat suntik kombinasi lebih dari 7 hari.
 
-**Formulasi dan dosis Pil Kontrasepsi Darurat**  
-\- Gambar \-
+''';
 
+  static const String kontrasepsiDaruratMd2 = '''
+**Formulasi dan dosis Pil Kontrasepsi Darurat**  
+''';
+
+  static const String kontrasepsiDaruratMd3 = '''
 * **Jumlah pil yang banyaj, namun aman**  
   **LNG \= levonorgestrel EE \= ethinyl estradiol**  
-  **Ingat pencantuman kadar obat dinyatakan dalam atuan milligram (mg), microgram (μg atau mcg)**
+  **Ingat pencantuman kadar obat dinyatakan dalam atuan milligram (mg), microgram (μg atau mcg)**''';
 
+  static const String kontrasepsiDaruratMd4 = '''
 **Pil Kontrasepsi Darurat pada Beberapa Kondisi Medis**  
-\-GAMBAR
+''';
 
+  static const String kontrasepsiDaruratMd5 = '''
 KPK \= Kontrasepsi Pil Kombinasi; LNG \= levonorgestrel; UPA \= Ulipristal asetat; NA \= Not Applicable (Tidak dapat diterapkan)
 
 **AKDR Copper untuk Kontrasepsi Darurat (AKDR-Cu)**
@@ -41,9 +50,6 @@ KPK \= Kontrasepsi Pil Kombinasi; LNG \= levonorgestrel; UPA \= Ulipristal aseta
 Metode ini sangat efektif untuk mencegah kehamilan, metode ini dapat dipakai dalam 5 hari pasca senggama yang tidak terlindungi sebagai kontrasepsi darurat. Namun, Ketika Waktu ovulasi dapat diprediksi, AKDR-Cu dapat dimasukkan lebih dari 5 hari setelah ovulasi.
 
 Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk insersi AKDR-Cu sebagai kontrasepsi darurat.
-
-\-GAMBAR-  
-
 ''';
 
   @override
@@ -65,19 +71,61 @@ Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk
               data: kontrasepsiDaruratMd1,
               styleSheet: context.markdownStyleSheet,
             ),
-            // const Gap(20),
-            // MarkdownBody(
-            //   data: ketentuanMd2,
-            //   styleSheet: context.markdownStyleSheet,
-            // ),
-            // const Gap(20),
-            // MarkdownBody(
-            //   data: ketentuanMd3,
-            //   styleSheet: context.markdownStyleSheet,
-            // ),
+            const Gap(Sizes.p12),
+            MarkdownBody(
+              data: kontrasepsiDaruratMd2,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(Sizes.p16),
+            GestureDetector(
+                onTap: () =>
+                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
+                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
+            const Gap(Sizes.p12),
+            MarkdownBody(
+              data: kontrasepsiDaruratMd3,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(Sizes.p12),
+            MarkdownBody(
+              data: kontrasepsiDaruratMd4,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(Sizes.p12),
+            GestureDetector(
+                onTap: () =>
+                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
+                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
+            const Gap(Sizes.p12),
+            MarkdownBody(
+              data: kontrasepsiDaruratMd5,
+              styleSheet: context.markdownStyleSheet,
+            ),
+            const Gap(Sizes.p12),
+            GestureDetector(
+                onTap: () =>
+                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
+                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
           ],
         ),
       ),
     );
+  }
+
+  Widget _imagePlaceholder(String image) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(Sizes.p16),
+      ),
+      alignment: Alignment.center,
+      child: Image.asset(
+        image,
+      ),
+    );
+  }
+
+  void _navigateToPhotoDetail(BuildContext context, String imageUrl) {
+    context.router.push(PhotoDetailRoute(photoUrl: imageUrl));
   }
 }

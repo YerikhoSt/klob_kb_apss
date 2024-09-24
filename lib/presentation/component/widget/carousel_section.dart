@@ -48,7 +48,7 @@ class _CarouselSectionState extends State<CarouselSection> {
                       width: 355,
                       child: Image.asset(
                         e,
-                        fit: BoxFit.fill,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ),

@@ -80,7 +80,7 @@ Lupa meminum pil atau terlambat diminum sangat mungkin terjadi. Pengguna KOK har
               data: kontrasepsiKombinasiMd1,
               styleSheet: context.markdownStyleSheet,
             ),
-            // const Gap(16),
+            // const Gap(Sizes.p16),
             // MarkdownBody(
             //   data: langkahKonselingMd2,
             //   styleSheet: context.markdownStyleSheet,

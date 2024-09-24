@@ -82,7 +82,7 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: actions
         ?..add(
-          const Gap(16),
+          const Gap(Sizes.p16),
         ),
       bottom: bottom,
     );

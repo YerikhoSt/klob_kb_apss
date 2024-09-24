@@ -49,13 +49,13 @@ class MetodeKontrasepsiItem extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(16),
+          const Gap(Sizes.p16),
           Expanded(
               child: Text(
             title,
             style: context.titleMedium?.bold.toColor(AppColors.neutral100),
           )),
-          const Gap(16),
+          const Gap(Sizes.p16),
           Container(
             height: 24,
             width: 24,

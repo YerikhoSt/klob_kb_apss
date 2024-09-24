@@ -47,7 +47,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
       },
       children: [
         _kondisiMedisSection(context),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentListSection(context),
       ],
     );
@@ -65,7 +65,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
               .toSize(18)
               .toColor(AppColors.neutral100),
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         for (var i = 0; i < filteredSelectedData.length; i++) ...[
           _kondisiMedisItem(context, i, filteredSelectedData[i]['type'] ?? '',
               filteredSelectedData[i]['option'] ?? ''),
@@ -132,7 +132,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['hormonal'] ?? '',
           percent: int.parse((mergedData['hormonal'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentItem(
           context,
           type: 'POP',
@@ -140,7 +140,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['pilProgestin'] ?? '',
           percent: int.parse((mergedData['pilProgestin'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentItem(
           context,
           type: 'DMPA',
@@ -148,7 +148,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['suntikProgestin'] ?? '',
           percent: int.parse((mergedData['suntikProgestin'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentItem(
           context,
           type: 'LNG/ETG',
@@ -156,7 +156,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['implan'] ?? '',
           percent: int.parse((mergedData['implan'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentItem(
           context,
           type: 'LNG-IUD',
@@ -164,7 +164,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['akdrLevonorgestrel'] ?? '',
           percent: int.parse((mergedData['akdrLevonorgestrel'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarPercentItem(
           context,
           type: 'Cu-IUD',
@@ -172,13 +172,13 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           value: mergedData['akdrCopper'] ?? '',
           percent: int.parse((mergedData['akdrCopper'] ?? '0')[0]) / 4,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarCharacterItem(
           context,
           type: 'TUBEKTOMI',
           value: mergedData['tubektomi'] ?? '',
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         _circullarCharacterItem(
           context,
           type: 'VASEKTOMI',
@@ -211,7 +211,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
           progressColor: AppColors.accent,
           backgroundColor: AppColors.neutral40,
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -254,7 +254,7 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
             ),
           ),
         ),
-        const Gap(16),
+        const Gap(Sizes.p16),
         Text(
           type,
           style: context.textTheme.bodyMedium?.bold,

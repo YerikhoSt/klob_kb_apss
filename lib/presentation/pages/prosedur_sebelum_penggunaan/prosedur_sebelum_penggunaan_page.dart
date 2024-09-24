@@ -9,6 +9,7 @@ import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrappe
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/data/prosedur_sebelum_penggunaan_data_source.dart';
 import 'package:klob_kb_apps/presentation/pages/prosedur_sebelum_penggunaan/data/prosedur_sebelum_penggunaan_model.dart';
 import 'package:klob_kb_apps/util/constants/app_resources.dart';
+import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 import 'package:svg_flutter/svg.dart';
@@ -212,7 +213,7 @@ class _ProsedurSebelumPenggunaanPageState
                   'A',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Expanded(
                   child: RichText(
                     softWrap: true,
@@ -237,7 +238,7 @@ class _ProsedurSebelumPenggunaanPageState
                   'B',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Expanded(
                   child: RichText(
                     softWrap: true,
@@ -261,7 +262,7 @@ class _ProsedurSebelumPenggunaanPageState
                   'C',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Text(
                   'TIDAK PERLU DIKERJAKAN',
                   style:

@@ -42,7 +42,7 @@ class PrimaryBottomSheetWrapper extends StatelessWidget {
               borderRadius: BorderRadius.circular(Sizes.p16),
             ),
           ),
-          const Gap(20),
+          const Gap(Sizes.p20),
           child,
         ],
       ),

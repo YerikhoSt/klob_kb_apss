@@ -7,6 +7,7 @@ import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/d
 import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/data/efektivitas_metode_model.dart';
 import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrapper.dart';
 import 'package:klob_kb_apps/util/constants/app_resources.dart';
+import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 import 'package:svg_flutter/svg.dart';
@@ -136,21 +137,21 @@ class _EfektivitasMetodeKontrasepsiPageState
               style: context.textTheme.bodyLarge?.bold
                   .toColor(AppColors.neutral100),
             ),
-            const Gap(16),
+            const Gap(Sizes.p16),
             Row(
               children: [
                 Text(
                   '0 - 0.9',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Text(
                   'Sangat Efektif',
                   style: const TextStyle().medium.toSize(14),
                 ),
               ],
             ),
-            const Gap(8),
+            const Gap(Sizes.p8),
             Row(
               children: [
                 Padding(
@@ -160,35 +161,35 @@ class _EfektivitasMetodeKontrasepsiPageState
                     style: const TextStyle().medium.toSize(14),
                   ),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Text(
                   'Efektif',
                   style: const TextStyle().medium.toSize(14),
                 ),
               ],
             ),
-            const Gap(8),
+            const Gap(Sizes.p8),
             Row(
               children: [
                 Text(
                   '10 - 25',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Text(
                   'Cukup Efektif',
                   style: const TextStyle().medium.toSize(14),
                 ),
               ],
             ),
-            const Gap(8),
+            const Gap(Sizes.p8),
             Row(
               children: [
                 Text(
                   '26 - 32',
                   style: const TextStyle().medium.toSize(14),
                 ),
-                const Gap(16),
+                const Gap(Sizes.p16),
                 Text(
                   'Kurang Efektif',
                   style: const TextStyle().medium.toSize(14),

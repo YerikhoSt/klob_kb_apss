@@ -11,6 +11,7 @@ import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrappe
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/cubit/kondisi_medis_penyerta_cubit.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/cubit/kondisi_medis_penyerta_state.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/widget/question_widget.dart';
+import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 import 'package:klob_kb_apps/util/extensions/text_style_extensions.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -123,7 +124,7 @@ class _KondisiMedisPenyertaPageState extends State<KondisiMedisPenyertaPage> {
             'Kondisi Medis',
             style: context.textTheme.bodyLarge?.bold,
           ),
-          const Gap(16),
+          const Gap(Sizes.p16),
           CustomSingleChildScrollViewWrapper(
             scrollDirection: Axis.horizontal,
             children: [
@@ -133,46 +134,46 @@ class _KondisiMedisPenyertaPageState extends State<KondisiMedisPenyertaPage> {
                 type: 'CHC',
                 value: data['hormonal'] ?? '',
               ),
-              const Gap(16),
+              const Gap(Sizes.p16),
               circularPercentWidget(
                 context,
                 percent: int.parse((data['pilProgestin'] ?? '0')[0]) / 4,
                 type: 'POP',
                 value: data['pilProgestin'] ?? '',
               ),
-              const Gap(16),
+              const Gap(Sizes.p16),
               circularPercentWidget(
                 context,
                 percent: int.parse((data['suntikProgestin'] ?? '0')[0]) / 4,
                 type: 'DMPA',
                 value: data['suntikProgestin'] ?? '',
               ),
-              const Gap(16),
+              const Gap(Sizes.p16),
               circularPercentWidget(
                 context,
                 percent: int.parse((data['implan'] ?? '0')[0]) / 4,
                 type: 'LNG/ETG',
                 value: data['implan'] ?? '',
               ),
-              const Gap(16),
+              const Gap(Sizes.p16),
               circularPercentWidget(context,
                   percent:
                       int.parse((data['akdrLevonorgestrel'] ?? '0')[0]) / 4,
                   type: 'LNG-IUD',
                   value: data['akdrLevonorgestrel'] ?? ''),
-              const Gap(16),
+              const Gap(Sizes.p16),
               circularPercentWidget(context,
                   percent: int.parse((data['akdrCopper'] ?? '0')[0]) / 4,
                   type: 'Cu-IUD',
                   value: data['akdrCopper'] ?? ''),
-              const Gap(16),
+              const Gap(Sizes.p16),
               _circullarCharacterItem('Tubektomi', data['tubektomi'] ?? ''),
-              const Gap(16),
+              const Gap(Sizes.p16),
               _circullarCharacterItem('Vasektomi', data['vasektomi'] ?? ''),
-              const Gap(16),
+              const Gap(Sizes.p16),
             ],
           ),
-          const Gap(16),
+          const Gap(Sizes.p16),
           SizedBox(
             width: double.infinity,
             child: PrimaryButton(

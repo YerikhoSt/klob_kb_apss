@@ -17,9 +17,8 @@ class PenapisanKehamilanQuestionWidget extends StatelessWidget {
     return CustomColumn(children: [
       Text(
         question.question,
-        style: context.titleSmall,
+        style: context.titleMedium,
       ),
-      const Gap(Sizes.p8),
       Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: question.options
@@ -37,7 +36,8 @@ class PenapisanKehamilanQuestionWidget extends StatelessWidget {
                   ),
                 ))
             .toList(),
-      )
+      ),
+      const Gap(Sizes.p8),
     ]);
   }
 }

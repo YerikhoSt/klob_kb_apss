@@ -109,12 +109,12 @@ class KetentuanKondisiMedisPage extends StatelessWidget {
               data: ketentuanMd,
               styleSheet: context.markdownStyleSheet,
             ),
-            const Gap(20),
+            const Gap(Sizes.p20),
             MarkdownBody(
               data: ketentuanMd2,
               styleSheet: context.markdownStyleSheet,
             ),
-            const Gap(20),
+            const Gap(Sizes.p20),
             MarkdownBody(
               data: ketentuanMd3,
               styleSheet: context.markdownStyleSheet,

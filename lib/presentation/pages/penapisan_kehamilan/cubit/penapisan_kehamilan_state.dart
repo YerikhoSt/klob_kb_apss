@@ -5,8 +5,9 @@ import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/model/penapi
 class PenapisanKehamilanCubit extends Cubit<PenapisanKehamilanState> {
   PenapisanKehamilanCubit() : super(PenapisanKehamilanInitial());
 
+  final data = PenapisanKehamilanQuestionModel.getListQuestion();
+
   void loadData() {
-    final data = PenapisanKehamilanQuestionModel.getListQuestion();
     emit(ItemLoaded(data));
   }
 
