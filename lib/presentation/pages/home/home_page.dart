@@ -16,12 +16,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
-          child: Stack(
+      body: Stack(
         children: [
-          _mainSection(),
+          Positioned.fill(child: _mainSection()),
         ],
-      )),
+      ),
     );
   }
 

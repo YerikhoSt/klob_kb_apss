@@ -23,6 +23,7 @@ extension XTextTheme on BuildContext {
   TextStyle? get labelSmall => textTheme.labelSmall;
 
   MarkdownStyleSheet get markdownStyleSheet => MarkdownStyleSheet(
+      textAlign: WrapAlignment.spaceEvenly,
       p: bodyMedium?.toSize(16).toColor(AppColors.neutral100));
 }
 

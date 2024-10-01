@@ -7,8 +7,8 @@ import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
-class ProgrestogenOnlyPillsPage extends StatelessWidget {
-  const ProgrestogenOnlyPillsPage({super.key});
+class PilProgestinPage extends StatelessWidget {
+  const PilProgestinPage({super.key});
 
   static const String progestogenPillsMd1 = """
 ***Pil Progestin***  
@@ -80,12 +80,7 @@ Pil Progestin merupakan pil yang mengandung Progestin dengan dosis yang sangat r
             MarkdownBody(
               data: progestogenPillsMd1,
               styleSheet: context.markdownStyleSheet,
-            ),
-            // const Gap(Sizes.p16),
-            // MarkdownBody(
-            //   data: langkahKonselingMd2,
-            //   styleSheet: context.markdownStyleSheet,
-            // ),
+            ),          
           ],
         ),
       ),

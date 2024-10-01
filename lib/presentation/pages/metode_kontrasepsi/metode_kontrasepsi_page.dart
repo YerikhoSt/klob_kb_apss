@@ -1,10 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:klob_kb_apps/config/router/app_router.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/presentation/component/scroll_view/custom_single_child_scroll_view_wrapper.dart';
-import 'package:klob_kb_apps/presentation/component/widget/wrapper/card_wrapper.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/widget/metode_kontrasepsi_item.dart';
 
 @RoutePage()
@@ -25,62 +23,94 @@ class MetodeKontrasepsiPage extends StatelessWidget {
     return CustomSingleChildScrollViewWrapper(
       children: [
         MetodeKontrasepsiItem(
-          title: 'Combined hormonal contraceptives',
+          title: 'Kontrasepsi Oral Kombinasi',
           onPressed: () => _navigateToCombinedHormonal(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Progestogen-only pills',
+          title: 'Pil Progestin',
           onPressed: () => _navigateToProgrestogenOnlyPill(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Progestogen-only injectables',
-          onPressed: () => _navigateToProgestogenInjectables(context),
+          title: 'Pil Kontrasepsi Darurat',
+          onPressed: () => _navigateToKontrasepsiDarurat(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Implants',
-          onPressed: () {},
+          title: 'Injeksi Bulanan',
+          onPressed: () => _navigateToInjeksiBulanan(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Levenorgestrel IUD',
-          onPressed: () {},
+          title: 'Koyo Kombinasi',
+          onPressed: () => _navigateToKoyoKombinasi(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Copper intrauterine device',
-          onPressed: () {},
+          title: 'Cincin Vagina Kombinasi',
+          onPressed: () => _navigateToCincinVagina(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Barrier methods',
-          onPressed: () {},
+          title: 'Implan',
+          onPressed: () => _navigateToImplan(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Lactational amenorrhoea method',
-          onPressed: () {},
+          title: 'Alat Kontrasepsi Dalam Rahim-Copper',
+          onPressed: () => _navigateToAkdrCopper(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Female steerilization',
+          title: 'Alat Kontrasepsi Dalam Rahim-LNG',
+          onPressed: () => _navigateToAkdrLNG(context),
+        ),
+        MetodeKontrasepsiItem(
+          title: 'Tubektomi',
           onPressed: () => _navigateToFemaleSterillization(context),
         ),
         MetodeKontrasepsiItem(
-          title: 'Male sterilization (vasectomy)',
-          onPressed: () {},
+          title: 'Vasektomi',
+          onPressed: () => _navigateToVasektomi(context),
         ),
       ],
     );
   }
 
   void _navigateToCombinedHormonal(BuildContext context) {
-    context.router.push(const CombinedHormonalRoute());
+    context.router.push(const KontrasepsiOralKombinasiRoute());
   }
 
   void _navigateToFemaleSterillization(BuildContext context) {
-    context.router.push(const FemaleSterillizationRoute());
+    context.router.push(const TubektomiRoute());
   }
 
-  void _navigateToProgestogenInjectables(BuildContext context) {
-    context.router.push(const ProgestogenInjectablesRoute());
+  void _navigateToKontrasepsiDarurat(BuildContext context) {
+    context.router.push(const KontrasepsiDaruratRoute());
   }
 
   void _navigateToProgrestogenOnlyPill(BuildContext context) {
-    context.router.push(const ProgrestogenOnlyPillsRoute());
+    context.router.push(const PilProgestinRoute());
+  }
+
+  void _navigateToInjeksiBulanan(BuildContext context) {
+    context.router.push(const InjeksiBulananRoute());
+  }
+
+  void _navigateToVasektomi(BuildContext context) {
+    context.router.push(const VasektomiRoute());
+  }
+
+  void _navigateToAkdrLNG(BuildContext context) {
+    context.router.push(const AkdrLngRoute());
+  }
+
+  void _navigateToAkdrCopper(BuildContext context) {
+    context.router.push(const AkdrCopperRoute());
+  }
+
+  void _navigateToImplan(BuildContext context) {
+    context.router.push(const ImplanRoute());
+  }
+
+  void _navigateToCincinVagina(BuildContext context) {
+    context.router.push(const CincinVaginaRoute());
+  }
+
+  void _navigateToKoyoKombinasi(BuildContext context) {
+    context.router.push(const KoyoKombinasiRoute());
   }
 }

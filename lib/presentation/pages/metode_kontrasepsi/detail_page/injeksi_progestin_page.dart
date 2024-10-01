@@ -1,15 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
-class ProgestogenInjectablesPage extends StatelessWidget {
-  const ProgestogenInjectablesPage({super.key});
+class InjeksiProgestinPage extends StatelessWidget {
+  const InjeksiProgestinPage({super.key});
 
   static const String progestogenInjectablesMd1 = '''
 ***Injeksi Progestin***
@@ -54,7 +53,7 @@ Injeksi kontrasepsi Depot Medroxyprogesterone Acetate (DMPA) dan Norethisterone 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const PrimaryAppBar(
-          title: 'Progestogen-only injectables',
+          title: 'Injeksi Progestin',
         ),
         body: _body(context));
   }

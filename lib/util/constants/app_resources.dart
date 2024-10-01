@@ -7,4 +7,13 @@ class AppIcons {
 
   static const String imagelangkahKonseling =
       'assets/images/img_langkah_konseling.png';
+
+  static const String imageKontraDarurat1 =
+      'assets/images/img_kontra_darurat1.png';
+  static const String imageKontraDarurat2 =
+      'assets/images/img_kontra_darurat2.png';
+  static const String imageKontraDarurat3 =
+      'assets/images/img_kontra_darurat3.png';
+
+  static const String imageInjekBulanan = 'assets/images/img_injek_bulanan.png';
 }

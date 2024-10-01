@@ -78,9 +78,9 @@ Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk
             ),
             const Gap(Sizes.p16),
             GestureDetector(
-                onTap: () =>
-                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
-                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
+                onTap: () => _navigateToPhotoDetail(
+                    context, AppIcons.imageKontraDarurat1),
+                child: _imagePlaceholder(AppIcons.imageKontraDarurat1)),
             const Gap(Sizes.p12),
             MarkdownBody(
               data: kontrasepsiDaruratMd3,
@@ -93,9 +93,9 @@ Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk
             ),
             const Gap(Sizes.p12),
             GestureDetector(
-                onTap: () =>
-                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
-                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
+                onTap: () => _navigateToPhotoDetail(
+                    context, AppIcons.imageKontraDarurat2),
+                child: _imagePlaceholder(AppIcons.imageKontraDarurat2)),
             const Gap(Sizes.p12),
             MarkdownBody(
               data: kontrasepsiDaruratMd5,
@@ -103,9 +103,9 @@ Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk
             ),
             const Gap(Sizes.p12),
             GestureDetector(
-                onTap: () =>
-                    _navigateToPhotoDetail(context, AppIcons.imagePlaceholder),
-                child: _imagePlaceholder(AppIcons.imagePlaceholder)),
+                onTap: () => _navigateToPhotoDetail(
+                    context, AppIcons.imageKontraDarurat3),
+                child: _imagePlaceholder(AppIcons.imageKontraDarurat3)),
           ],
         ),
       ),

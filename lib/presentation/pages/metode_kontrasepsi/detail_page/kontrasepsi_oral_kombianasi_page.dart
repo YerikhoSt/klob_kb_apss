@@ -1,15 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
-class CombinedHormonalPage extends StatelessWidget {
-  const CombinedHormonalPage({super.key});
+class KontrasepsiOralKombinasiPage extends StatelessWidget {
+  const KontrasepsiOralKombinasiPage({super.key});
 
   static const String kontrasepsiKombinasiMd1 = '''
 ***Kontrasepsi Oral Kombinasi***  
@@ -57,7 +56,7 @@ Lupa meminum pil atau terlambat diminum sangat mungkin terjadi. Pengguna KOK har
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const PrimaryAppBar(
-          title: 'Combined Hormonal Contraceptives',
+          title: 'Kontrasepsi Oral Kombinasi',
         ),
         body: _body(context));
   }

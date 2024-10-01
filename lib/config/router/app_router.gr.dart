@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    CombinedHormonalRoute.name: (routeData) {
+    AkdrCopperRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const CombinedHormonalPage(),
+        child: const AkdrCopperPage(),
+      );
+    },
+    AkdrLngRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AkdrLngPage(),
+      );
+    },
+    CincinVaginaRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CincinVaginaPage(),
       );
     },
     EfektivitasMetodeKontrasepsiRoute.name: (routeData) {
@@ -27,16 +39,28 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const EfektivitasMetodeKontrasepsiPage(),
       );
     },
-    FemaleSterillizationRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const FemaleSterillizationPage(),
-      );
-    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomePage(),
+      );
+    },
+    ImplanRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ImplanPage(),
+      );
+    },
+    InjeksiBulananRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const InjeksiBulananPage(),
+      );
+    },
+    InjeksiProgestinRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const InjeksiProgestinPage(),
       );
     },
     KetentuanKondisiMedisRoute.name: (routeData) {
@@ -80,10 +104,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const KontrasepsiDaruratPage(),
       );
     },
+    KontrasepsiOralKombinasiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KontrasepsiOralKombinasiPage(),
+      );
+    },
     KontrasepsiPascaKehamilanRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const KontrasepsiPascaKehamilanPage(),
+      );
+    },
+    KoyoKombinasiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const KoyoKombinasiPage(),
       );
     },
     LangkahKonselingRoute.name: (routeData) {
@@ -115,16 +151,16 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
-    ProgestogenInjectablesRoute.name: (routeData) {
+    PilKontrasepsiDaruratRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ProgestogenInjectablesPage(),
+        child: const PilKontrasepsiDaruratPage(),
       );
     },
-    ProgrestogenOnlyPillsRoute.name: (routeData) {
+    PilProgestinRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ProgrestogenOnlyPillsPage(),
+        child: const PilProgestinPage(),
       );
     },
     ProsedurSebelumPenggunaanRoute.name: (routeData) {
@@ -133,19 +169,59 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ProsedurSebelumPenggunaanPage(),
       );
     },
+    TubektomiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TubektomiPage(),
+      );
+    },
+    VasektomiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const VasektomiPage(),
+      );
+    },
   };
 }
 
 /// generated route for
-/// [CombinedHormonalPage]
-class CombinedHormonalRoute extends PageRouteInfo<void> {
-  const CombinedHormonalRoute({List<PageRouteInfo>? children})
+/// [AkdrCopperPage]
+class AkdrCopperRoute extends PageRouteInfo<void> {
+  const AkdrCopperRoute({List<PageRouteInfo>? children})
       : super(
-          CombinedHormonalRoute.name,
+          AkdrCopperRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'CombinedHormonalRoute';
+  static const String name = 'AkdrCopperRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [AkdrLngPage]
+class AkdrLngRoute extends PageRouteInfo<void> {
+  const AkdrLngRoute({List<PageRouteInfo>? children})
+      : super(
+          AkdrLngRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AkdrLngRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CincinVaginaPage]
+class CincinVaginaRoute extends PageRouteInfo<void> {
+  const CincinVaginaRoute({List<PageRouteInfo>? children})
+      : super(
+          CincinVaginaRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CincinVaginaRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -165,20 +241,6 @@ class EfektivitasMetodeKontrasepsiRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FemaleSterillizationPage]
-class FemaleSterillizationRoute extends PageRouteInfo<void> {
-  const FemaleSterillizationRoute({List<PageRouteInfo>? children})
-      : super(
-          FemaleSterillizationRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'FemaleSterillizationRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -188,6 +250,48 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ImplanPage]
+class ImplanRoute extends PageRouteInfo<void> {
+  const ImplanRoute({List<PageRouteInfo>? children})
+      : super(
+          ImplanRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ImplanRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [InjeksiBulananPage]
+class InjeksiBulananRoute extends PageRouteInfo<void> {
+  const InjeksiBulananRoute({List<PageRouteInfo>? children})
+      : super(
+          InjeksiBulananRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'InjeksiBulananRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [InjeksiProgestinPage]
+class InjeksiProgestinRoute extends PageRouteInfo<void> {
+  const InjeksiProgestinRoute({List<PageRouteInfo>? children})
+      : super(
+          InjeksiProgestinRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'InjeksiProgestinRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -307,6 +411,20 @@ class KontrasepsiDaruratRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [KontrasepsiOralKombinasiPage]
+class KontrasepsiOralKombinasiRoute extends PageRouteInfo<void> {
+  const KontrasepsiOralKombinasiRoute({List<PageRouteInfo>? children})
+      : super(
+          KontrasepsiOralKombinasiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KontrasepsiOralKombinasiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [KontrasepsiPascaKehamilanPage]
 class KontrasepsiPascaKehamilanRoute extends PageRouteInfo<void> {
   const KontrasepsiPascaKehamilanRoute({List<PageRouteInfo>? children})
@@ -316,6 +434,20 @@ class KontrasepsiPascaKehamilanRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'KontrasepsiPascaKehamilanRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [KoyoKombinasiPage]
+class KoyoKombinasiRoute extends PageRouteInfo<void> {
+  const KoyoKombinasiRoute({List<PageRouteInfo>? children})
+      : super(
+          KoyoKombinasiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'KoyoKombinasiRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -406,29 +538,29 @@ class PhotoDetailRouteArgs {
 }
 
 /// generated route for
-/// [ProgestogenInjectablesPage]
-class ProgestogenInjectablesRoute extends PageRouteInfo<void> {
-  const ProgestogenInjectablesRoute({List<PageRouteInfo>? children})
+/// [PilKontrasepsiDaruratPage]
+class PilKontrasepsiDaruratRoute extends PageRouteInfo<void> {
+  const PilKontrasepsiDaruratRoute({List<PageRouteInfo>? children})
       : super(
-          ProgestogenInjectablesRoute.name,
+          PilKontrasepsiDaruratRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'ProgestogenInjectablesRoute';
+  static const String name = 'PilKontrasepsiDaruratRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
-/// [ProgrestogenOnlyPillsPage]
-class ProgrestogenOnlyPillsRoute extends PageRouteInfo<void> {
-  const ProgrestogenOnlyPillsRoute({List<PageRouteInfo>? children})
+/// [PilProgestinPage]
+class PilProgestinRoute extends PageRouteInfo<void> {
+  const PilProgestinRoute({List<PageRouteInfo>? children})
       : super(
-          ProgrestogenOnlyPillsRoute.name,
+          PilProgestinRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'ProgrestogenOnlyPillsRoute';
+  static const String name = 'PilProgestinRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -443,6 +575,34 @@ class ProsedurSebelumPenggunaanRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProsedurSebelumPenggunaanRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [TubektomiPage]
+class TubektomiRoute extends PageRouteInfo<void> {
+  const TubektomiRoute({List<PageRouteInfo>? children})
+      : super(
+          TubektomiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TubektomiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [VasektomiPage]
+class VasektomiRoute extends PageRouteInfo<void> {
+  const VasektomiRoute({List<PageRouteInfo>? children})
+      : super(
+          VasektomiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'VasektomiRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

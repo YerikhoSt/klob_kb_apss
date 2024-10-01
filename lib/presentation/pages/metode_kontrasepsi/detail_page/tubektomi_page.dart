@@ -1,15 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
 
 @RoutePage()
-class FemaleSterillizationPage extends StatelessWidget {
-  const FemaleSterillizationPage({super.key});
+class TubektomiPage extends StatelessWidget {
+  const TubektomiPage({super.key});
 
   static const String sterillizationMd1 = '''
 ***Sterilisasi Wanita***
@@ -84,7 +83,7 @@ Prosedur Laparoskopi
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const PrimaryAppBar(
-          title: 'Female steerilization',
+          title: 'Tubektomi',
         ),
         body: _body(context));
   }

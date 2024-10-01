@@ -87,7 +87,7 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
                 ),
                 alignment: Alignment.center,
                 child: Image.asset(
-                  AppIcons.imagePlaceholder,
+                  AppIcons.imagelangkahKonseling,
                 ),
               ),
             ),

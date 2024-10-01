@@ -9,10 +9,18 @@ import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus
 import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus/kontrasepsi_darurat_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kontrasepsi_dalam_keadaan_khusus/kontrasepsi_pasca_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/langkah_konseling/langkah_konseling_page.dart';
-import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/combined_hormonal_page.dart';
-import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/female_sterillization_page.dart';
-import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/progestogen__injectables_page.dart';
-import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/progrestogen_only_pills_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/akdr_copper_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/akdr_lng_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/cincin_vagina_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/implan_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/injeksi_bulanan_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/injeksi_progestin_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/kontrasepsi_oral_kombianasi_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/koyo_kombinasi_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/pil_kontrasepsi_darurat_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/tubektomi_page.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/pil_progestin.dart';
+import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/detail_page/vasektomi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/metode_kontrasepsi/metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/penapisan_kehamilan/penapisan_kehamilan_page.dart';
 import 'package:klob_kb_apps/presentation/pages/photo_detail/photo_detail_page.dart';
@@ -46,24 +54,56 @@ class AppRouter extends _$AppRouter {
           path: '/metodekontrasepsi',
         ),
         AutoRoute(
-          page: CombinedHormonalRoute.page,
-          path: '/metodekontrasepsi/combinedhormonal',
-        ),
-        AutoRoute(
-          page: FemaleSterillizationRoute.page,
-          path: '/metodekontrasepsi/femalesterillization',
-        ),
-        AutoRoute(
-          page: ProgestogenInjectablesRoute.page,
-          path: '/metodekontrasepsi/progestogeninjectables',
-        ),
-        AutoRoute(
-          page: ProgrestogenOnlyPillsRoute.page,
-          path: '/metodekontrasepsi/progrestogenonlypills',
-        ),
-        AutoRoute(
           page: LangkahKonselingRoute.page,
-          path: '/metodekontrasepsi/langkahkonseling',
+          path: '/langkahkonseling',
+        ),
+        AutoRoute(
+          page: KontrasepsiOralKombinasiRoute.page,
+          path: '/metodekontrasepsi/oralkombinasi',
+        ),
+        AutoRoute(
+          page: TubektomiRoute.page,
+          path: '/metodekontrasepsi/tubektomi',
+        ),
+        AutoRoute(
+          page: InjeksiProgestinRoute.page,
+          path: '/metodekontrasepsi/injeksiprogestin',
+        ),
+        AutoRoute(
+          page: PilKontrasepsiDaruratRoute.page,
+          path: '/metodekontrasepsi/pilkontrasepsidarurat',
+        ),
+        AutoRoute(
+          page: InjeksiBulananRoute.page,
+          path: '/metodekontrasepsi/injeksibulanan',
+        ),
+        AutoRoute(
+          page: AkdrCopperRoute.page,
+          path: '/metodekontrasepsi/akdrcopper',
+        ),
+        AutoRoute(
+          page: AkdrLngRoute.page,
+          path: '/metodekontrasepsi/akdrlng',
+        ),
+        AutoRoute(
+          page: CincinVaginaRoute.page,
+          path: '/metodekontrasepsi/cincinvagina',
+        ),
+        AutoRoute(
+          page: ImplanRoute.page,
+          path: '/metodekontrasepsi/implan',
+        ),
+        AutoRoute(
+          page: KoyoKombinasiRoute.page,
+          path: '/metodekontrasepsi/koyokombinasi',
+        ),
+        AutoRoute(
+          page: VasektomiRoute.page,
+          path: '/metodekontrasepsi/vasektomi',
+        ),
+        AutoRoute(
+          page: PilProgestinRoute.page,
+          path: '/metodekontrasepsi/pilprogestin',
         ),
         AutoRoute(
           page: PhotoDetailRoute.page,
