@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
+import '../../../../config/theme/app_colors.dart';
 import 'prosedur_sebelum_penggunaan_model.dart';
 
 class ProsedurSebelumPenggunaanDataSource extends DataGridSource {
@@ -56,7 +57,16 @@ class ProsedurSebelumPenggunaanDataSource extends DataGridSource {
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
+      final int index = effectiveRows.indexOf(row);
+
       return Container(
+          color: _getDefaultBackgroundColor(
+            index: effectiveRows.indexOf(row),
+            isAKDR: dataGridCell.columnName == 'iud',
+            isDiafragma: dataGridCell.columnName == 'cincinVagina',
+            isTubektomi: dataGridCell.columnName == 'tubektomi',
+            isVasektomi: dataGridCell.columnName == 'vasektomi',
+          ),
           alignment: (dataGridCell.columnName == 'prosedur')
               ? Alignment.centerLeft
               : Alignment.center,
@@ -66,5 +76,30 @@ class ProsedurSebelumPenggunaanDataSource extends DataGridSource {
             softWrap: true,
           ));
     }).toList());
+  }
+
+  Color _getDefaultBackgroundColor(
+      {required int index,
+      required bool isAKDR,
+      required bool isDiafragma,
+      required bool isTubektomi,
+      required bool isVasektomi}) {
+    if (index % 2 != 1) {
+      return AppColors.bgTabel1;
+    } else if (isAKDR && index == 1 || isAKDR && index == 5) {
+      return AppColors.bgTabelRed;
+    } else if (isAKDR && index == 4 || isAKDR && index == 6) {
+      return AppColors.bgTabel3;
+    } else if (isDiafragma && index == 1) {
+      return AppColors.bgTabelRed;
+    } else if (isTubektomi && index == 1 || isTubektomi && index == 7) {
+      return AppColors.bgTabelRed;
+    } else if (index % 2 == 1 && isTubektomi && index == 4) {
+      return AppColors.bgTabel3;
+    } else if (isVasektomi && index == 1) {
+      return AppColors.bgTabelRed;
+    } else {
+      return AppColors.bgTabel2;
+    }
   }
 }

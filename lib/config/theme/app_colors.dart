@@ -19,6 +19,11 @@ class AppColors {
   static Color grey900 = Colors.grey.shade900;
   static const Color shimmerColor = Color(0xFFEBEBF4);
 
+  static Color bgTabel1 = primaryShade100.withAlpha(80);
+  static Color bgTabel2 = primaryShade400.withAlpha(80);
+  static Color bgTabel3 = primaryShade400.withAlpha(130);
+  static Color bgTabelRed = dangerMain.withAlpha(100);
+
   static const Color doneColor = Color(0xFF31D9EB);
   static const Color progressColor = Color(0xFF5597FD);
 
@@ -27,7 +32,7 @@ class AppColors {
   static const Color primaryShade200 = Color(0xff9fdfde);
   static const Color primaryShade300 = Color(0xff79d3d1);
   static const Color primaryShade400 = Color(0xff52c6c4);
-  static const Color primaryShade500 = Color(0xff3DB9B7);
+  static const Color primaryShade500 = Color(0xff00B8A5);
   static const Color primaryShade600 = Color(0xff39adab);
   static const Color primaryShade700 = Color(0xff2c8685);
   static const Color primaryShade800 = Color(0xff20605f);
@@ -39,7 +44,7 @@ class AppColors {
   static const successBorder = Color(0xFFDAF2DE);
   static const successHover = Color(0xFF38C952);
   static const successPressed = Color(0xFF237832);
-  static const successFocused = Color(0xFFDCF7E1);
+  static const successFocused = Color.fromARGB(255, 65, 90, 70);
 
   static const dangerMain = Color(0xFFFC544B);
   static const dangerSurface = Color(0xFFFEF1EF);

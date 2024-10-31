@@ -49,55 +49,50 @@ class _EfektivitasMetodeKontrasepsiPageState
 
   Widget _buildBody(
       BuildContext context, EfektivitasMetodeDataSource datasource) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8, top: 16),
-      child: SfDataGrid(
-        source: datasource,
-        onQueryRowHeight: (details) {
-          return details.rowIndex == 0 ? 90 : 60;
-        },
-        columns: [
-          GridColumn(
-              width: 200,
-              columnName: 'metode',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Metode Kontrasepsi',
-                    softWrap: true,
-                    style:
-                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
-                    textAlign: TextAlign.center,
-                  ))),
-          GridColumn(
-              width: 100,
-              columnName: 'dipakaiKonsisten',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Dipakai secara tepat dan konsisten',
-                    style:
-                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                  ))),
-          GridColumn(
-              columnName: 'dipakaiBiasa',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Dipakai secara biasa',
-                    style:
-                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                  ))),
-        ],
-        frozenColumnsCount: 1,
-      ),
+    return SfDataGrid(
+      source: datasource,
+      columnWidthMode: ColumnWidthMode.fill,
+      onQueryRowHeight: (details) {
+        return details.rowIndex == 0 ? 120 : 60;
+      },
+      gridLinesVisibility: GridLinesVisibility.both,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      columns: [
+        GridColumn(
+            columnName: 'metode',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Metode Kontrasepsi',
+                  softWrap: true,
+                  style: context.bodyMedium?.bold.toColor(AppColors.neutral100),
+                  textAlign: TextAlign.center,
+                ))),
+        GridColumn(
+            columnName: 'dipakaiKonsisten',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Dipakai secara tepat dan konsisten',
+                  style: context.bodyMedium?.bold.toColor(AppColors.neutral100),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'dipakaiBiasa',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Dipakai secara biasa',
+                  style: context.bodyMedium?.bold.toColor(AppColors.neutral100),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
+                ))),
+      ],
+      frozenColumnsCount: 1,
     );
   }
 

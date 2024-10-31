@@ -79,7 +79,7 @@ class MetodeKontrasepsiPage extends StatelessWidget {
   }
 
   void _navigateToKontrasepsiDarurat(BuildContext context) {
-    context.router.push(const KontrasepsiDaruratRoute());
+    context.router.push(const PilKontrasepsiDaruratRoute());
   }
 
   void _navigateToProgrestogenOnlyPill(BuildContext context) {

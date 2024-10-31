@@ -44,6 +44,8 @@ class EfektivitasMetodeModel {
       EfektivitasMetodeModel(
           metode: 'Pil kombinasi', dipakaiKonsisten: '0.3', dipakaiBiasa: '8'),
       EfektivitasMetodeModel(
+          metode: 'Pil Progestin', dipakaiKonsisten: '0.3', dipakaiBiasa: '8'),
+      EfektivitasMetodeModel(
           metode: 'Koyo kombinasi', dipakaiKonsisten: '0.3', dipakaiBiasa: '8'),
       EfektivitasMetodeModel(
           metode: 'Cincin vagina kombinasi',

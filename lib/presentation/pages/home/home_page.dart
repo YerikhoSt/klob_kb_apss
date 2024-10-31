@@ -38,22 +38,12 @@ class HomePage extends StatelessWidget {
         //   AppColors.primaryShade100,
         //   AppColors.primaryShade100,
         // ], begin: Alignment.topLeft)),
-        color: AppColors.primarySurface,
+        color: AppColors.neutral10,
         child: Center(
           child: CustomSingleChildScrollViewWrapper(
               padding: const EdgeInsets.all(Sizes.p16),
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.min,
-              bodyWrapper: (child) {
-                return Container(
-                  decoration: BoxDecoration(
-                      color: AppColors.neutral10,
-                      borderRadius: BorderRadius.circular(Sizes.p16)),
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: Sizes.p16, vertical: Sizes.p32),
-                  child: child,
-                );
-              },
               children: [
                 CarouselSection(carouselData: carouselData),
                 const Gap(Sizes.p24),

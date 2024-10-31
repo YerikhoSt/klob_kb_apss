@@ -17,7 +17,7 @@ class PenapisanKehamilanQuestionWidget extends StatelessWidget {
     return CustomColumn(children: [
       Text(
         question.question,
-        style: context.titleMedium,
+        style: context.labelLarge,
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.start,

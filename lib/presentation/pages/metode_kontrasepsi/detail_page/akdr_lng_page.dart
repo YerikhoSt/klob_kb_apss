@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
@@ -49,28 +48,18 @@ Petugas kesehatan yang terlatih secara khusus memasukan AKDR-LNG kedalam rahim w
   Widget _body(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Sizes.p16),
-      child: Container(
-        constraints: BoxConstraints(
-          minHeight: MediaQuery.of(context).size.height,
-        ),
-        decoration: BoxDecoration(
-            color: AppColors.neutral10,
-            borderRadius: BorderRadius.circular(Sizes.p16)),
-        padding: const EdgeInsets.symmetric(
-            horizontal: Sizes.p16, vertical: Sizes.p16),
-        child: Column(
-          children: [
-            MarkdownBody(
-              data: akdrLngMd1,
-              styleSheet: context.markdownStyleSheet,
-            ),
-            // const Gap(Sizes.p16),
-            // MarkdownBody(
-            //   data: langkahKonselingMd2,
-            //   styleSheet: context.markdownStyleSheet,
-            // ),
-          ],
-        ),
+      child: Column(
+        children: [
+          MarkdownBody(
+            data: akdrLngMd1,
+            styleSheet: context.markdownStyleSheet,
+          ),
+          // const Gap(Sizes.p16),
+          // MarkdownBody(
+          //   data: langkahKonselingMd2,
+          //   styleSheet: context.markdownStyleSheet,
+          // ),
+        ],
       ),
     );
   }

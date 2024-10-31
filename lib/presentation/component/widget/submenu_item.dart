@@ -35,20 +35,24 @@ class SubmenuItem extends StatelessWidget {
             height: 50,
             width: 55,
             decoration: BoxDecoration(
+              border: Border.all(
+                color: AppColors.primaryMain,
+                width: 0.2,
+              ),
               color: AppColors.primarySurfaceLight,
               borderRadius: BorderRadius.circular(8),
             ),
             alignment: Alignment.center,
             child: SvgPicture.asset(
               iconPath,
-              width: 24,
-              height: 24,
+              width: 36,
+              height: 46,
             ),
           ),
           const Gap(Sizes.p8),
           Text(
             title,
-            style: context.bodySmall?.bold,
+            style: context.bodySmall?.semiBold,
             textAlign: TextAlign.center,
           ),
         ],

@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:klob_kb_apps/config/router/app_router.dart';
-import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
 import 'package:klob_kb_apps/util/constants/sizes.dart';
 import 'package:klob_kb_apps/util/extensions/build_context_extensions.dart';
@@ -225,112 +224,102 @@ Injeksi bulanan mengandung 2 hormon-progestin dan estrogen- seperti hormon alami
   Widget _body(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Sizes.p16),
-      child: Container(
-        constraints: BoxConstraints(
-          minHeight: MediaQuery.of(context).size.height,
-        ),
-        decoration: BoxDecoration(
-            color: AppColors.neutral10,
-            borderRadius: BorderRadius.circular(Sizes.p16)),
-        padding: const EdgeInsets.symmetric(
-            horizontal: Sizes.p16, vertical: Sizes.p16),
-        child: Column(
-          children: [
-            MarkdownBody(
-              data: injeksiBulananMd1,
-              styleSheet: context.markdownStyleSheet,
-              imageBuilder: (uri, title, alt) {
-                return GestureDetector(
-                  onTap: () {
-                    _navigateToPhotoDetail(context, uri.path);
-                  },
-                  child: Image.asset(uri.path),
-                );
-              },
-            ),
-//             Html(
-//               data: injeksiBulananHtml,
-//               shrinkWrap: true,
-//             ),
-//             Html(
-//               shrinkWrap: true,
-//               extensions: [
-//                 const TableHtmlExtension(),
-//                 TagWrapExtension(
-//                     tagsToWrap: {"table"},
-//                     builder: (child) {
-//                       return SingleChildScrollView(
-//                         scrollDirection: Axis.horizontal,
-//                         child: child,
-//                       );
-//                     }),
-//                 // TagWrapExtension(
-//                 //   builder: (children) {
-//                 //     return Column(children: [children]);
-//                 //   },
-//                 //   tagsToWrap: {'ul'},
-//                 // ),
-//               ],
-//               style: {
-//                 "table": Style(
-//                   height: Height.auto(),
-//                   width: Width.auto(),
-//                 ),
-//                 "tr": Style(
-//                   height: Height.auto(),
-//                   width: Width.auto(),
-//                 ),
-//                 "th": Style(
-//                   padding: HtmlPaddings.all(6),
-//                   height: Height.auto(),
-//                   border: const Border(
-//                     left: BorderSide(color: Colors.black, width: 0.5),
-//                     bottom: BorderSide(color: Colors.black, width: 0.5),
-//                     top: BorderSide(color: Colors.black, width: 0.5),
-//                   ),
-//                 ),
-//                 "td": Style(
-//                   padding: HtmlPaddings.all(6),
-//                   height: Height.auto(),
-//                   border: const Border(
-//                     left: BorderSide(color: Colors.black, width: 0.5),
-//                     bottom: BorderSide(color: Colors.black, width: 0.5),
-//                     top: BorderSide(color: Colors.black, width: 0.5),
-//                     right: BorderSide(color: Colors.black, width: 0.5),
-//                   ),
-//                 ),
-//                 "col": Style(
-//                   height: Height.auto(),
-//                   width: Width.auto(),
-//                 ),
-//               },
-//               data: '''
-//   <table>
-//     <colgroup>
-//     <col width="50%" />
-//     <col span="2" width="25%" />
-//     </colgroup>
-//     <thead>
-//     <tr><th>One</th><th>Two</th><th>Three</th></tr>
-//     </thead>
-//     <tbody>
-//     <tr>
-//     <td rowspan='2'>Rowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan</td><td>Data</td><td>Data</td>
-//     </tr>
-//     <tr>
-//     <td colspan="2"><img alt='Google' src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' /></td>
-//     </tr>
-//     </tbody>
-//     <tfoot>
-//     <tr><td> <ul> <li> 1</li></ul> </td><td>
-
-//     </td><td>fData</td></tr>
-//     </tfoot>
-//     </table>
-// ''',
-//             ),
-          ],
-        ),
+      child: Column(
+        children: [
+          MarkdownBody(
+            data: injeksiBulananMd1,
+            styleSheet: context.markdownStyleSheet,
+            imageBuilder: (uri, title, alt) {
+              return GestureDetector(
+                onTap: () {
+                  _navigateToPhotoDetail(context, uri.path);
+                },
+                child: Image.asset(uri.path),
+              );
+            },
+          ),
+      //             Html(
+      //               data: injeksiBulananHtml,
+      //               shrinkWrap: true,
+      //             ),
+      //             Html(
+      //               shrinkWrap: true,
+      //               extensions: [
+      //                 const TableHtmlExtension(),
+      //                 TagWrapExtension(
+      //                     tagsToWrap: {"table"},
+      //                     builder: (child) {
+      //                       return SingleChildScrollView(
+      //                         scrollDirection: Axis.horizontal,
+      //                         child: child,
+      //                       );
+      //                     }),
+      //                 // TagWrapExtension(
+      //                 //   builder: (children) {
+      //                 //     return Column(children: [children]);
+      //                 //   },
+      //                 //   tagsToWrap: {'ul'},
+      //                 // ),
+      //               ],
+      //               style: {
+      //                 "table": Style(
+      //                   height: Height.auto(),
+      //                   width: Width.auto(),
+      //                 ),
+      //                 "tr": Style(
+      //                   height: Height.auto(),
+      //                   width: Width.auto(),
+      //                 ),
+      //                 "th": Style(
+      //                   padding: HtmlPaddings.all(6),
+      //                   height: Height.auto(),
+      //                   border: const Border(
+      //                     left: BorderSide(color: Colors.black, width: 0.5),
+      //                     bottom: BorderSide(color: Colors.black, width: 0.5),
+      //                     top: BorderSide(color: Colors.black, width: 0.5),
+      //                   ),
+      //                 ),
+      //                 "td": Style(
+      //                   padding: HtmlPaddings.all(6),
+      //                   height: Height.auto(),
+      //                   border: const Border(
+      //                     left: BorderSide(color: Colors.black, width: 0.5),
+      //                     bottom: BorderSide(color: Colors.black, width: 0.5),
+      //                     top: BorderSide(color: Colors.black, width: 0.5),
+      //                     right: BorderSide(color: Colors.black, width: 0.5),
+      //                   ),
+      //                 ),
+      //                 "col": Style(
+      //                   height: Height.auto(),
+      //                   width: Width.auto(),
+      //                 ),
+      //               },
+      //               data: '''
+      //   <table>
+      //     <colgroup>
+      //     <col width="50%" />
+      //     <col span="2" width="25%" />
+      //     </colgroup>
+      //     <thead>
+      //     <tr><th>One</th><th>Two</th><th>Three</th></tr>
+      //     </thead>
+      //     <tbody>
+      //     <tr>
+      //     <td rowspan='2'>Rowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan\nRowspan</td><td>Data</td><td>Data</td>
+      //     </tr>
+      //     <tr>
+      //     <td colspan="2"><img alt='Google' src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png' /></td>
+      //     </tr>
+      //     </tbody>
+      //     <tfoot>
+      //     <tr><td> <ul> <li> 1</li></ul> </td><td>
+      
+      //     </td><td>fData</td></tr>
+      //     </tfoot>
+      //     </table>
+      // ''',
+      //             ),
+        ],
       ),
     );
   }

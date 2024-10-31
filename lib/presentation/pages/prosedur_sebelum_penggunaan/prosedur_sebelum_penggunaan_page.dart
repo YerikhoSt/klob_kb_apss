@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
@@ -34,10 +35,23 @@ class _ProsedurSebelumPenggunaanPageState
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
     _prosedurSebelumPenggunaanData =
         ProsedurSebelumPenggunaanModel.getProsedurSebelumPenggunaanData();
     _datasource = ProsedurSebelumPenggunaanDataSource(
         prosedurSebelumPenggunaan: _prosedurSebelumPenggunaanData);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override
@@ -50,153 +64,151 @@ class _ProsedurSebelumPenggunaanPageState
 
   Widget _buildBody(
       BuildContext context, ProsedurSebelumPenggunaanDataSource datasource) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8, top: 16),
-      child: SfDataGrid(
-        source: datasource,
-        onQueryRowHeight: (details) {
-          // return details.getIntrinsicRowHeight(details.rowIndex);
-          return details.rowIndex == 0 ? 75 : 60;
-        },
-        columns: [
-          GridColumn(
-              width: 200,
-              columnName: 'prosedur',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Prosedur',
-                    softWrap: true,
-                    style:
-                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
-                  ))),
-          GridColumn(
-              width: 120,
-              columnName: 'kontrasepsiKombinasi',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Kontrasepsi Kombinasi',
-                    softWrap: true,
+    return SfDataGrid(
+      source: datasource,
+      columnWidthMode: ColumnWidthMode.fill,
+      onQueryRowHeight: (details) {
+        // return details.getIntrinsicRowHeight(details.rowIndex);
+        return details.rowIndex == 0 ? 75 : 60;
+      },
+      gridLinesVisibility: GridLinesVisibility.both,
+      headerGridLinesVisibility: GridLinesVisibility.both,
+      columns: [
+        GridColumn(
+            width: 150,
+            columnName: 'prosedur',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Prosedur',
+                  softWrap: true,
+                  style:
+                      context.bodySmall?.semiBold.toColor(AppColors.neutral100),
+                ))),
+        GridColumn(
+            width: 120,
+            columnName: 'kontrasepsiKombinasi',
+            label: Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'Kontrasepsi Kombinasi',
+                  softWrap: true,
+                  textAlign: TextAlign.center,
+                  style:
+                      context.bodySmall?.semiBold.toColor(AppColors.neutral100),
+                ))),
+        GridColumn(
+            width: 120,
+            columnName: 'suntikanKombinasi',
+            label: Container(
+                alignment: Alignment.center,
+                child: Text('Suntikan Kombinasi',
                     textAlign: TextAlign.center,
-                    style:
-                        context.bodyMedium?.bold.toColor(AppColors.neutral100),
-                  ))),
-          GridColumn(
-              width: 120,
-              columnName: 'suntikanKombinasi',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Suntikan Kombinasi',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'pilPogestin',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Pil Pogestin',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'suntikanPogestin',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Suntikan Pogestin',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'implan',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Implan',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'iud',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('OUD/AKDR',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'koyoKombinasi',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Koyo Kombinasi',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'cincinVagina',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Cincin Vagina',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'spermisida',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Spermisida',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'tubektomi',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Tubektomi',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-          GridColumn(
-              width: 120,
-              columnName: 'vasektomi',
-              label: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text('Vasektomi',
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      style: context.bodyMedium?.bold
-                          .toColor(AppColors.neutral100)))),
-        ],
-        frozenColumnsCount: 1,
-      ),
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'pilPogestin',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Pil Pogestin',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'suntikanPogestin',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Suntikan Pogestin',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'implan',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Implan',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'iud',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('OUD/AKDR',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'koyoKombinasi',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Koyo Kombinasi',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'cincinVagina',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Cincin Vagina',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'spermisida',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Spermisida',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'tubektomi',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Tubektomi',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+        GridColumn(
+            width: 120,
+            columnName: 'vasektomi',
+            label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text('Vasektomi',
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    style: context.bodySmall?.semiBold
+                        .toColor(AppColors.neutral100)))),
+      ],
+      frozenColumnsCount: 1,
     );
   }
 

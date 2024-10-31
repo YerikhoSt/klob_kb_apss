@@ -55,16 +55,9 @@ Kriteria kelayakan untuk insersi AKDR-Cu secara umum juga dapat diterapkan untuk
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(Sizes.p16),
       child: Container(
-        constraints: BoxConstraints(
-          minHeight: MediaQuery.of(context).size.height,
-        ),
-        decoration: BoxDecoration(
-            color: AppColors.neutral10,
-            borderRadius: BorderRadius.circular(Sizes.p16)),
-        padding: const EdgeInsets.symmetric(
-            horizontal: Sizes.p16, vertical: Sizes.p16),
+        padding: const EdgeInsets.all(Sizes.p16), 
+        color: AppColors.neutral10,
         child: Column(
           children: [
             MarkdownBody(
