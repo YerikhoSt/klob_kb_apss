@@ -19,8 +19,6 @@ class KetentuanKondisiMedisBsd extends StatelessWidget {
         decoration: BoxDecoration(
             color: AppColors.neutral10,
             borderRadius: BorderRadius.circular(Sizes.p16)),
-        padding: const EdgeInsets.symmetric(
-            horizontal: Sizes.p16, vertical: Sizes.p16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

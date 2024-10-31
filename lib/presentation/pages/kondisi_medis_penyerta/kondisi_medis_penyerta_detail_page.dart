@@ -4,6 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:klob_kb_apps/config/theme/app_colors.dart';
 import 'package:klob_kb_apps/helper/bottom_sheet_helper.dart';
 import 'package:klob_kb_apps/presentation/component/app_bar/app_bar.dart';
+import 'package:klob_kb_apps/presentation/component/bottom_sheet/bottom_sheet_wrapper.dart';
+import 'package:klob_kb_apps/presentation/component/bottom_sheet/scrollable_bottom_sheet_wrapper.dart';
 import 'package:klob_kb_apps/presentation/component/scroll_view/custom_single_child_scroll_view_wrapper.dart';
 import 'package:klob_kb_apps/presentation/component/widget/wrapper/custom_wrapper.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/widget/ketentuan_kondisi_medis_bsd.dart';
@@ -359,7 +361,9 @@ class KondisiMedisPenyertaDetailPage extends StatelessWidget {
       final maxHeight = screenHeight * 0.6;
 
       return SizedBox(
-          height: maxHeight, child: const KetentuanKondisiMedisBsd());
+          height: maxHeight,
+          child: const ScrollableBottomSheetWrapper(
+              child: KetentuanKondisiMedisBsd()));
     });
   }
 }

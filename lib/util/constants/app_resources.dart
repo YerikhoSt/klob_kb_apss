@@ -17,6 +17,9 @@ class AppIcons {
 
   static const String imageInjekBulanan = 'assets/images/img_injek_bulanan.png';
 
+  static const String imgKontrasepsiPascaKehamilan =
+      'assets/images/kontrasepsi_pasca_kehamilan.png';
+
   static const String icLangkahKonseling = 'assets/svgs/langkah_konseling.svg';
   static const String icDiagram = 'assets/svgs/diagram.svg';
   static const String icMetodeKontrasepsi =
@@ -28,5 +31,6 @@ class AppIcons {
   static const String icProsedurSebelum = 'assets/svgs/prosedur_sebelum.svg';
   static const String icPanduan = 'assets/svgs/panduan.svg';
   static const String icEfektivitas = 'assets/svgs/efektivitas.svg';
-  static const String icKontrasepsiKeadaanKhusus = 'assets/svgs/kontrasepsi_keadaan_khusus.svg';
+  static const String icKontrasepsiKeadaanKhusus =
+      'assets/svgs/kontrasepsi_keadaan_khusus.svg';
 }

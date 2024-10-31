@@ -60,7 +60,7 @@ Kemudian, lakukan pemeriksaan yang diperlakukan untuk melakukan penapisan klien 
 
   Widget _body(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(Sizes.p16),
+      // padding: const EdgeInsets.all(Sizes.p16),
       child: Container(
         constraints: BoxConstraints(
           minHeight: MediaQuery.of(context).size.height,
