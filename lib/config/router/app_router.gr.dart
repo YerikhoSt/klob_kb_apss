@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AboutRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AboutPage(),
+      );
+    },
     AkdrCopperRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -134,6 +140,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MetodeKontrasepsiPage(),
       );
     },
+    MitraBestariRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MitraBestariPage(),
+      );
+    },
     PenapisanKehamilanRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -175,10 +187,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const SplashPage(),
       );
     },
+    TentangAplikasiRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TentangAplikasiPage(),
+      );
+    },
     TubektomiRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const TubektomiPage(),
+      );
+    },
+    UcapanTerimakasihRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const UcapanTerimakasihPage(),
       );
     },
     VasektomiRoute.name: (routeData) {
@@ -188,6 +212,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AboutPage]
+class AboutRoute extends PageRouteInfo<void> {
+  const AboutRoute({List<PageRouteInfo>? children})
+      : super(
+          AboutRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AboutRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -487,6 +525,20 @@ class MetodeKontrasepsiRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [MitraBestariPage]
+class MitraBestariRoute extends PageRouteInfo<void> {
+  const MitraBestariRoute({List<PageRouteInfo>? children})
+      : super(
+          MitraBestariRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MitraBestariRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [PenapisanKehamilanPage]
 class PenapisanKehamilanRoute extends PageRouteInfo<void> {
   const PenapisanKehamilanRoute({List<PageRouteInfo>? children})
@@ -600,6 +652,20 @@ class SplashRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [TentangAplikasiPage]
+class TentangAplikasiRoute extends PageRouteInfo<void> {
+  const TentangAplikasiRoute({List<PageRouteInfo>? children})
+      : super(
+          TentangAplikasiRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TentangAplikasiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [TubektomiPage]
 class TubektomiRoute extends PageRouteInfo<void> {
   const TubektomiRoute({List<PageRouteInfo>? children})
@@ -609,6 +675,20 @@ class TubektomiRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TubektomiRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [UcapanTerimakasihPage]
+class UcapanTerimakasihRoute extends PageRouteInfo<void> {
+  const UcapanTerimakasihRoute({List<PageRouteInfo>? children})
+      : super(
+          UcapanTerimakasihRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'UcapanTerimakasihRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

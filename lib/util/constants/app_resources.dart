@@ -5,6 +5,10 @@ class AppIcons {
       'assets/images/img_placeholder_photo.png';
   static const String info = 'assets/svgs/ic_info.svg';
   static const String splash = 'assets/svgs/image_splash.svg';
+  static const String infoCircle = 'assets/svgs/info-circle.svg';
+  static const String lovely = 'assets/svgs/lovely.svg';
+  static const String mitra = 'assets/svgs/mitra.svg';
+  static const String thanks = 'assets/svgs/thanks.svg';
 
   static const String imgSplash = 'assets/images/image_splash.png';
 

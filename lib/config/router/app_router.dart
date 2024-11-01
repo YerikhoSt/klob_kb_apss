@@ -1,5 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:klob_kb_apps/presentation/pages/about/about_page.dart';
+import 'package:klob_kb_apps/presentation/pages/about/detail/mitra_bestari_page.dart';
+import 'package:klob_kb_apps/presentation/pages/about/detail/tentang_aplikasi_page.dart';
+import 'package:klob_kb_apps/presentation/pages/about/detail/ucapan_terimakasih_page.dart';
 import 'package:klob_kb_apps/presentation/pages/efektivitas_metode_kontrasepsi/efektivitas_metode_kontrasepsi_page.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/ketentuan_kondisi_medis.dart';
 import 'package:klob_kb_apps/presentation/pages/kondisi_medis_penyerta/kondisi_medis_page.dart';
@@ -37,6 +41,11 @@ class AppRouter extends _$AppRouter {
         // AutoRoute(page: MainWrapperRoute.page, path: '/', initial: true),
         AutoRoute(page: SplashRoute.page, path: '/', initial: true),
         AutoRoute(page: HomeRoute.page, path: '/home'),
+        AutoRoute(page: AboutRoute.page, path: '/about'),
+        AutoRoute(page: UcapanTerimakasihRoute.page, path: '/about/ucapan'),
+        AutoRoute(page: MitraBestariRoute.page, path: '/about/mitrabestari'),
+        AutoRoute(
+            page: TentangAplikasiRoute.page, path: '/about/tentangaplikasi'),
         AutoRoute(
             page: KondisiMedisPenyertaDetailRoute.page,
             path: '/kondisimedisdetail'),
