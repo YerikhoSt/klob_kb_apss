@@ -4,6 +4,9 @@ class AppIcons {
   static const String imagePlaceholder =
       'assets/images/img_placeholder_photo.png';
   static const String info = 'assets/svgs/ic_info.svg';
+  static const String splash = 'assets/svgs/image_splash.svg';
+
+  static const String imgSplash = 'assets/images/image_splash.png';
 
   static const String imagelangkahKonseling =
       'assets/images/img_langkah_konseling.png';
